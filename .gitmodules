@@ -1,0 +1,3 @@
+[submodule "nuxt/shopinvader-template-nuxtjs"]
+	path = nuxt/shopinvader-template-nuxtjs
+	url = https://github.com/shopinvader/shopinvader-template-nuxtjs

@@ -1,0 +1,29 @@
+import type { CollectionConfig } from 'payload'
+
+import { setCookieBasedOnDomain } from './hooks/setCookieBasedOnDomain'
+import { externalUsersLogin } from './endpoints/externalUsersLogin'
+
+export const Users: CollectionConfig = {
+  slug: 'users',
+  admin: {
+    useAsTitle: 'email',
+    group: 'Settings',
+  },
+  auth: {
+    tokenExpiration: 7200, 
+    verify: false, 
+    maxLoginAttempts: 5, 
+    lockTime: 600 * 1000, 
+  },
+  endpoints: [externalUsersLogin],
+  fields: [
+    
+  ],
+  // The following hook sets a cookie based on the domain a user logs in from.
+  // It checks the domain and matches it to a tenant in the system, then sets
+  // a 'payload-tenant' cookie for that tenant.
+
+  hooks: {
+    afterLogin: [setCookieBasedOnDomain],
+  },
+}
