@@ -1,0 +1,13 @@
+@import '../../shopinvader-template-nuxtjs/assets/css/main.scss';
+h2,
+.h2 {
+@apply text-inherit;
+}
+
+h1,
+.h1 {
+@apply text-inherit;
+}
+.layout-default main {
+   max-width: unset !important;
+}
