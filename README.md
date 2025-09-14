@@ -1,0 +1,3 @@
+# Shopinvader Odoo Payload Nuxt
+
+
