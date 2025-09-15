@@ -79,13 +79,6 @@ services:
   nuxt:
     build: nuxt
     environment:
-      # TODO it do not make sense to have public and private indices variables
-      # Backoffice private network url
-      NUXT_SHOPINVADER_ERP_PROXY_URL: http://odoo:8069/api-krapahute
-      NUXT_SHOPINVADER_ELASTICSEARCH_URL: http://elasticsearch:9200
-      NUXT_SHOPINVADER_ELASTICSEARCH_INDICES_CATEGORIES: demo_product_category
-      NUXT_SHOPINVADER_ELASTICSEARCH_INDICES_PRODUCTS: demo_product_variant
-      # Public url for the rendering in browser
       NUXT_PUBLIC_SHOPINVADER_ELASTICSEARCH_URL: http://elasticsearch.localhost:9080
       NUXT_PUBLIC_SHOPINVADER_ELASTICSEARCH_INDICES_PRODUCTS: demo_product_variant
       NUXT_PUBLIC_SHOPINVADER_ELASTICSEARCH_INDICES_CATEGORIES: demo_product_category
@@ -94,6 +87,9 @@ services:
       - 3000:3000
     networks:
       - local
+    depends_on:
+      - payload
+      - elasticsearch
   payload:
     build: payload
     environment:
@@ -112,6 +108,8 @@ services:
       - local
     depends_on:
       - db
+    ports:
+      - 1337:1337
   nginx:
     image: nginx
     volumes:
@@ -119,9 +117,13 @@ services:
       # We serve the odoo image with nginx for demo purpose (in production use a CDN)
       - ./data/filestore/db/storage/images:/images
     ports:
-      - 9080:80
+      - 9080:9080
     networks:
-      - local
+      local:
+        aliases:
+          - elasticsearch.localhost
+          - odoo.localhost
+          - payload.localhost
     depends_on:
       - odoo
       - payload

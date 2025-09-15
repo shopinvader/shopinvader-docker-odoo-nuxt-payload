@@ -25,14 +25,15 @@ export default defineNuxtConfig({
         file: "en-US.json",
         name: "English",
         icon: "circle-flags:en",
-      },
-      {
-        code: "fr",
-        language: "en_us",
-        file: "fr-FR.json",
-        name: "Français",
-        icon: "circle-flags:fr",
-      },
+      }
+      // TODO we should take this config from odoo api
+      //{
+      //  code: "fr",
+      //  language: "fr_fr",
+      //  file: "fr-FR.json",
+      //  name: "Français",
+      //  icon: "circle-flags:fr",
+      //},
     ],
     debug: false,
     lazy: true,
