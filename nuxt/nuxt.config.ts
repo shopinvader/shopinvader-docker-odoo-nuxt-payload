@@ -49,20 +49,7 @@ export default defineNuxtConfig({
     },
     public: {
       shopinvader: {
-        auth: {
-          type: "oidc",
-          profile: {
-            authority:
-              process.env.NUXT_PUBLIC_SHOPINVADER_AUTH_PROFILE_AUTHORITY || "",
-            clientId: "demo16.shopinvader.com",
-            redirectUri: "/account",
-            scope: "openid",
-            responseType: "code",
-            postLogoutRedirectUri: "/",
-          },
-        },
         erp: {
-          key: process.env.NUXT_PUBLIC_SHOPINVADER_ERP_KEY || "",
           url: process.env.NUXT_PUBLIC_SHOPINVADER_ERP_URL || "",
           default_role: "default",
         },
