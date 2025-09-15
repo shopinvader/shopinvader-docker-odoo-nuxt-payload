@@ -14,14 +14,12 @@ db_name = os.getenv("DB_NAME")
 
 if db_name:
     check_call(
-        ["click-odoo-update", "--if-exists", "-d", db_name, "--i18n-overwrite"]
-    )
-    check_call(
         [
             "click-odoo-initdb",
             "--unless-exists",
             "-n",
             db_name,
+            "-m shopinvader_docker_demo",
             "--no-cache",
         ]
     )

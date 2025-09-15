@@ -45,6 +45,7 @@ RUN mkdir -p /odoo/src \
 RUN pip install -e /odoo/src/odoo --config-setting editable_mode=compat
 
 # Install Odoo dependencies, and our project dependencies.
+COPY shopinvader_docker_demo /odoo/shopinvader_docker_demo
 COPY requirements.txt.in .
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv pip install -r /odoo/src/odoo/requirements.txt -r requirements.txt.in
@@ -63,4 +64,4 @@ RUN apt-get -qq update \
   git
 
 #
-COPY odoo-init /odoo-init
+COPY odoo-init /odoo/start-entrypoint.d/000_odoo-init

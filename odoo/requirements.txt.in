@@ -9,7 +9,4 @@ fastapi>=0.110.0
 
 odoo-addon-shopinvader-sale-channel @ git+https://github.com/shopinvader/odoo-shopinvader@refs/pull/1604/head#subdirectory=setup/shopinvader_sale_channel
 odoo-addon-shopinvader-app @ git+https://github.com/shopinvader/odoo-shopinvader-app@refs/pull/1/head#subdirectory=shopinvader_app
-
-odoo-addon-web_refresher
-odoo-addon-web_responsive
-odoo-addon-web_theme_classic
+-e /odoo/shopinvader_docker_demo

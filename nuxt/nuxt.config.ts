@@ -42,12 +42,6 @@ export default defineNuxtConfig({
     strategy: "prefix_except_default",
   },
   runtimeConfig: {
-    payload: {
-       url:
-        process.env.NUXT_PAYLOAD_URL ||
-        process.env.NUXT_PUBLIC_PAYLOAD_URL ||
-        "http://localhost:1337",
-    },
     public: {
       shopinvader: {
         erp: {

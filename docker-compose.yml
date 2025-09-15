@@ -6,16 +6,14 @@ services:
     user: "${UID}:${UID}"
     environment:
       - POSTGRES_USER=odoo
-      - POSTGRES_DB=db
       - POSTGRES_PASSWORD=odoo
     volumes:
-      - .db/:/var/lib/postgresql/data
+      - db:/var/lib/postgresql/data
       - ./database:/database
     networks:
       - local
   mailhog:
     image: mailhog/mailhog
-    container_name: 'mailhog'
     ports:
       - "1025:1025"
       - "8025:8025"
@@ -46,16 +44,12 @@ services:
       - ./data/addons:/data/odoo/addons
       - ./data/filestore:/data/odoo/filestore
       - ./data/sessions:/data/odoo/sessions
-      - ./odoo:/odoo/host
-      #- ./odoo/dev/odoo:/odoo/lib/python3.10/site-packages/odoo
-      #- ./odoo/dev/odoo-shopinvader/shopinvader_v2_app_demo:/odoo/lib/python3.10/site-packages/odoo/addons/shopinvader_v2_app_demo
   kwkhtmltopdf:
     image: acsone/kwkhtmltopdf
     networks:
       - local
 
   # TODO add ngnix config for odoo + cors config sur tout (pour pas se prendre la tete)
-
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.14.0
     environment:
@@ -79,10 +73,11 @@ services:
   nuxt:
     build: nuxt
     environment:
+      NUXT_PUBLIC_PAYLOAD_URL: http://payload.localhost:9080
       NUXT_PUBLIC_SHOPINVADER_ELASTICSEARCH_URL: http://elasticsearch.localhost:9080
       NUXT_PUBLIC_SHOPINVADER_ELASTICSEARCH_INDICES_PRODUCTS: demo_product_variant
       NUXT_PUBLIC_SHOPINVADER_ELASTICSEARCH_INDICES_CATEGORIES: demo_product_category
-      NUXT_PUBLIC_SHOPINVADER_ERP_URL: http://nuxt.localhost:9080/shopinvader/
+      NUXT_PUBLIC_SHOPINVADER_ERP_URL: http://nuxt.localhost:9080/shopinvader-api/demo
     ports:
       - 3000:3000
     networks:
@@ -131,3 +126,4 @@ services:
       - elasticsearch
 volumes:
   esdata:
+  db:
