@@ -2,14 +2,15 @@
 -- PostgreSQL database dump
 --
 
-\restrict lTO3F0j0Gw4gkr1Mc7SMqxTh5eoq1EoftTeZvkZBJflKSyjKCPfhlqBxJeb1nLk
+\restrict 1foYYxoNP9jx8lU5blAJIbZ6xMmQX3PwVIsSxV88PXdp9OZMV9tYu9NX3fZGPg2
 
--- Dumped from database version 13.0 (Debian 13.0-1.pgdg100+1)
--- Dumped by pg_dump version 14.19 (Ubuntu 14.19-0ubuntu0.22.04.1)
+-- Dumped from database version 17.6 (Debian 17.6-1.pgdg13+1)
+-- Dumped by pg_dump version 17.6 (Debian 17.6-1.pgdg13+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -19,7 +20,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: _locales; Type: TYPE; Schema: public; Owner: strapi
+-- Name: _locales; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public._locales AS ENUM (
@@ -28,10 +29,10 @@ CREATE TYPE public._locales AS ENUM (
 );
 
 
-ALTER TYPE public._locales OWNER TO strapi;
+ALTER TYPE public._locales OWNER TO odoo;
 
 --
--- Name: enum__pages_v_blocks_banner_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_blocks_banner_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_blocks_banner_background AS ENUM (
@@ -42,10 +43,10 @@ CREATE TYPE public.enum__pages_v_blocks_banner_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_blocks_banner_background OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_blocks_banner_background OWNER TO odoo;
 
 --
--- Name: enum__pages_v_blocks_cards_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_blocks_cards_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_blocks_cards_background AS ENUM (
@@ -56,10 +57,10 @@ CREATE TYPE public.enum__pages_v_blocks_cards_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_blocks_cards_background OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_blocks_cards_background OWNER TO odoo;
 
 --
--- Name: enum__pages_v_blocks_hero_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_blocks_hero_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_blocks_hero_background AS ENUM (
@@ -70,10 +71,10 @@ CREATE TYPE public.enum__pages_v_blocks_hero_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_blocks_hero_background OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_blocks_hero_background OWNER TO odoo;
 
 --
--- Name: enum__pages_v_blocks_image_grid_images_link_type; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_blocks_image_grid_images_link_type; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_blocks_image_grid_images_link_type AS ENUM (
@@ -82,10 +83,10 @@ CREATE TYPE public.enum__pages_v_blocks_image_grid_images_link_type AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_blocks_image_grid_images_link_type OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_blocks_image_grid_images_link_type OWNER TO odoo;
 
 --
--- Name: enum__pages_v_blocks_product_grid_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_blocks_product_grid_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_blocks_product_grid_background AS ENUM (
@@ -96,10 +97,10 @@ CREATE TYPE public.enum__pages_v_blocks_product_grid_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_blocks_product_grid_background OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_blocks_product_grid_background OWNER TO odoo;
 
 --
--- Name: enum__pages_v_blocks_text_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_blocks_text_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_blocks_text_background AS ENUM (
@@ -110,10 +111,10 @@ CREATE TYPE public.enum__pages_v_blocks_text_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_blocks_text_background OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_blocks_text_background OWNER TO odoo;
 
 --
--- Name: enum__pages_v_blocks_text_cards_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_blocks_text_cards_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_blocks_text_cards_background AS ENUM (
@@ -124,10 +125,10 @@ CREATE TYPE public.enum__pages_v_blocks_text_cards_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_blocks_text_cards_background OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_blocks_text_cards_background OWNER TO odoo;
 
 --
--- Name: enum__pages_v_blocks_text_image_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_blocks_text_image_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_blocks_text_image_background AS ENUM (
@@ -138,10 +139,10 @@ CREATE TYPE public.enum__pages_v_blocks_text_image_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_blocks_text_image_background OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_blocks_text_image_background OWNER TO odoo;
 
 --
--- Name: enum__pages_v_blocks_three_columns_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_blocks_three_columns_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_blocks_three_columns_background AS ENUM (
@@ -152,10 +153,10 @@ CREATE TYPE public.enum__pages_v_blocks_three_columns_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_blocks_three_columns_background OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_blocks_three_columns_background OWNER TO odoo;
 
 --
--- Name: enum__pages_v_blocks_two_columns_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_blocks_two_columns_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_blocks_two_columns_background AS ENUM (
@@ -166,10 +167,10 @@ CREATE TYPE public.enum__pages_v_blocks_two_columns_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_blocks_two_columns_background OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_blocks_two_columns_background OWNER TO odoo;
 
 --
--- Name: enum__pages_v_published_locale; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_published_locale; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_published_locale AS ENUM (
@@ -178,10 +179,10 @@ CREATE TYPE public.enum__pages_v_published_locale AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_published_locale OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_published_locale OWNER TO odoo;
 
 --
--- Name: enum__pages_v_version_status; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum__pages_v_version_status; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum__pages_v_version_status AS ENUM (
@@ -190,10 +191,10 @@ CREATE TYPE public.enum__pages_v_version_status AS ENUM (
 );
 
 
-ALTER TYPE public.enum__pages_v_version_status OWNER TO strapi;
+ALTER TYPE public.enum__pages_v_version_status OWNER TO odoo;
 
 --
--- Name: enum_headers_navigation_link_navigation_child_link_type; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_headers_navigation_link_navigation_child_link_type; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_headers_navigation_link_navigation_child_link_type AS ENUM (
@@ -202,10 +203,10 @@ CREATE TYPE public.enum_headers_navigation_link_navigation_child_link_type AS EN
 );
 
 
-ALTER TYPE public.enum_headers_navigation_link_navigation_child_link_type OWNER TO strapi;
+ALTER TYPE public.enum_headers_navigation_link_navigation_child_link_type OWNER TO odoo;
 
 --
--- Name: enum_headers_navigation_link_type; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_headers_navigation_link_type; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_headers_navigation_link_type AS ENUM (
@@ -214,10 +215,10 @@ CREATE TYPE public.enum_headers_navigation_link_type AS ENUM (
 );
 
 
-ALTER TYPE public.enum_headers_navigation_link_type OWNER TO strapi;
+ALTER TYPE public.enum_headers_navigation_link_type OWNER TO odoo;
 
 --
--- Name: enum_pages_blocks_banner_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_blocks_banner_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_blocks_banner_background AS ENUM (
@@ -228,10 +229,10 @@ CREATE TYPE public.enum_pages_blocks_banner_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_blocks_banner_background OWNER TO strapi;
+ALTER TYPE public.enum_pages_blocks_banner_background OWNER TO odoo;
 
 --
--- Name: enum_pages_blocks_cards_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_blocks_cards_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_blocks_cards_background AS ENUM (
@@ -242,10 +243,10 @@ CREATE TYPE public.enum_pages_blocks_cards_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_blocks_cards_background OWNER TO strapi;
+ALTER TYPE public.enum_pages_blocks_cards_background OWNER TO odoo;
 
 --
--- Name: enum_pages_blocks_hero_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_blocks_hero_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_blocks_hero_background AS ENUM (
@@ -256,10 +257,10 @@ CREATE TYPE public.enum_pages_blocks_hero_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_blocks_hero_background OWNER TO strapi;
+ALTER TYPE public.enum_pages_blocks_hero_background OWNER TO odoo;
 
 --
--- Name: enum_pages_blocks_image_grid_images_link_type; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_blocks_image_grid_images_link_type; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_blocks_image_grid_images_link_type AS ENUM (
@@ -268,10 +269,10 @@ CREATE TYPE public.enum_pages_blocks_image_grid_images_link_type AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_blocks_image_grid_images_link_type OWNER TO strapi;
+ALTER TYPE public.enum_pages_blocks_image_grid_images_link_type OWNER TO odoo;
 
 --
--- Name: enum_pages_blocks_product_grid_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_blocks_product_grid_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_blocks_product_grid_background AS ENUM (
@@ -282,10 +283,10 @@ CREATE TYPE public.enum_pages_blocks_product_grid_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_blocks_product_grid_background OWNER TO strapi;
+ALTER TYPE public.enum_pages_blocks_product_grid_background OWNER TO odoo;
 
 --
--- Name: enum_pages_blocks_text_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_blocks_text_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_blocks_text_background AS ENUM (
@@ -296,10 +297,10 @@ CREATE TYPE public.enum_pages_blocks_text_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_blocks_text_background OWNER TO strapi;
+ALTER TYPE public.enum_pages_blocks_text_background OWNER TO odoo;
 
 --
--- Name: enum_pages_blocks_text_cards_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_blocks_text_cards_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_blocks_text_cards_background AS ENUM (
@@ -310,10 +311,10 @@ CREATE TYPE public.enum_pages_blocks_text_cards_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_blocks_text_cards_background OWNER TO strapi;
+ALTER TYPE public.enum_pages_blocks_text_cards_background OWNER TO odoo;
 
 --
--- Name: enum_pages_blocks_text_image_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_blocks_text_image_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_blocks_text_image_background AS ENUM (
@@ -324,10 +325,10 @@ CREATE TYPE public.enum_pages_blocks_text_image_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_blocks_text_image_background OWNER TO strapi;
+ALTER TYPE public.enum_pages_blocks_text_image_background OWNER TO odoo;
 
 --
--- Name: enum_pages_blocks_three_columns_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_blocks_three_columns_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_blocks_three_columns_background AS ENUM (
@@ -338,10 +339,10 @@ CREATE TYPE public.enum_pages_blocks_three_columns_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_blocks_three_columns_background OWNER TO strapi;
+ALTER TYPE public.enum_pages_blocks_three_columns_background OWNER TO odoo;
 
 --
--- Name: enum_pages_blocks_two_columns_background; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_blocks_two_columns_background; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_blocks_two_columns_background AS ENUM (
@@ -352,10 +353,10 @@ CREATE TYPE public.enum_pages_blocks_two_columns_background AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_blocks_two_columns_background OWNER TO strapi;
+ALTER TYPE public.enum_pages_blocks_two_columns_background OWNER TO odoo;
 
 --
--- Name: enum_pages_status; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_pages_status; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_pages_status AS ENUM (
@@ -364,10 +365,10 @@ CREATE TYPE public.enum_pages_status AS ENUM (
 );
 
 
-ALTER TYPE public.enum_pages_status OWNER TO strapi;
+ALTER TYPE public.enum_pages_status OWNER TO odoo;
 
 --
--- Name: enum_payload_jobs_log_state; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_payload_jobs_log_state; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_payload_jobs_log_state AS ENUM (
@@ -376,10 +377,10 @@ CREATE TYPE public.enum_payload_jobs_log_state AS ENUM (
 );
 
 
-ALTER TYPE public.enum_payload_jobs_log_state OWNER TO strapi;
+ALTER TYPE public.enum_payload_jobs_log_state OWNER TO odoo;
 
 --
--- Name: enum_payload_jobs_log_task_slug; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_payload_jobs_log_task_slug; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_payload_jobs_log_task_slug AS ENUM (
@@ -388,10 +389,10 @@ CREATE TYPE public.enum_payload_jobs_log_task_slug AS ENUM (
 );
 
 
-ALTER TYPE public.enum_payload_jobs_log_task_slug OWNER TO strapi;
+ALTER TYPE public.enum_payload_jobs_log_task_slug OWNER TO odoo;
 
 --
--- Name: enum_payload_jobs_task_slug; Type: TYPE; Schema: public; Owner: strapi
+-- Name: enum_payload_jobs_task_slug; Type: TYPE; Schema: public; Owner: odoo
 --
 
 CREATE TYPE public.enum_payload_jobs_task_slug AS ENUM (
@@ -400,14 +401,14 @@ CREATE TYPE public.enum_payload_jobs_task_slug AS ENUM (
 );
 
 
-ALTER TYPE public.enum_payload_jobs_task_slug OWNER TO strapi;
+ALTER TYPE public.enum_payload_jobs_task_slug OWNER TO odoo;
 
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
 --
--- Name: _pages_v; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v (
@@ -427,10 +428,10 @@ CREATE TABLE public._pages_v (
 );
 
 
-ALTER TABLE public._pages_v OWNER TO strapi;
+ALTER TABLE public._pages_v OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_banner; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_banner (
@@ -448,10 +449,10 @@ CREATE TABLE public._pages_v_blocks_banner (
 );
 
 
-ALTER TABLE public._pages_v_blocks_banner OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_banner OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_banner_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_banner_id_seq
@@ -463,17 +464,17 @@ CREATE SEQUENCE public._pages_v_blocks_banner_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_banner_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_banner_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_banner_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_banner_id_seq OWNED BY public._pages_v_blocks_banner.id;
 
 
 --
--- Name: _pages_v_blocks_benefits; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_benefits (
@@ -487,10 +488,10 @@ CREATE TABLE public._pages_v_blocks_benefits (
 );
 
 
-ALTER TABLE public._pages_v_blocks_benefits OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_benefits OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_benefits_benefits; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_benefits_benefits (
@@ -506,10 +507,10 @@ CREATE TABLE public._pages_v_blocks_benefits_benefits (
 );
 
 
-ALTER TABLE public._pages_v_blocks_benefits_benefits OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_benefits_benefits OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_benefits_benefits_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_benefits_benefits_id_seq
@@ -521,17 +522,17 @@ CREATE SEQUENCE public._pages_v_blocks_benefits_benefits_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_benefits_benefits_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_benefits_benefits_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_benefits_benefits_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_benefits_benefits_id_seq OWNED BY public._pages_v_blocks_benefits_benefits.id;
 
 
 --
--- Name: _pages_v_blocks_benefits_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_benefits_id_seq
@@ -543,17 +544,17 @@ CREATE SEQUENCE public._pages_v_blocks_benefits_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_benefits_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_benefits_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_benefits_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_benefits_id_seq OWNED BY public._pages_v_blocks_benefits.id;
 
 
 --
--- Name: _pages_v_blocks_cards; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_cards (
@@ -570,10 +571,10 @@ CREATE TABLE public._pages_v_blocks_cards (
 );
 
 
-ALTER TABLE public._pages_v_blocks_cards OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_cards OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_cards_cards; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_cards_cards (
@@ -587,10 +588,10 @@ CREATE TABLE public._pages_v_blocks_cards_cards (
 );
 
 
-ALTER TABLE public._pages_v_blocks_cards_cards OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_cards_cards OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_cards_cards_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_cards_cards_id_seq
@@ -602,17 +603,17 @@ CREATE SEQUENCE public._pages_v_blocks_cards_cards_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_cards_cards_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_cards_cards_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_cards_cards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_cards_cards_id_seq OWNED BY public._pages_v_blocks_cards_cards.id;
 
 
 --
--- Name: _pages_v_blocks_cards_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_cards_id_seq
@@ -624,17 +625,17 @@ CREATE SEQUENCE public._pages_v_blocks_cards_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_cards_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_cards_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_cards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_cards_id_seq OWNED BY public._pages_v_blocks_cards.id;
 
 
 --
--- Name: _pages_v_blocks_hero; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_hero (
@@ -652,10 +653,10 @@ CREATE TABLE public._pages_v_blocks_hero (
 );
 
 
-ALTER TABLE public._pages_v_blocks_hero OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_hero OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_hero_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_hero_id_seq
@@ -667,17 +668,17 @@ CREATE SEQUENCE public._pages_v_blocks_hero_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_hero_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_hero_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_hero_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_hero_id_seq OWNED BY public._pages_v_blocks_hero.id;
 
 
 --
--- Name: _pages_v_blocks_image_grid; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_image_grid (
@@ -693,10 +694,10 @@ CREATE TABLE public._pages_v_blocks_image_grid (
 );
 
 
-ALTER TABLE public._pages_v_blocks_image_grid OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_image_grid OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_image_grid_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_image_grid_id_seq
@@ -708,17 +709,17 @@ CREATE SEQUENCE public._pages_v_blocks_image_grid_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_image_grid_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_image_grid_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_image_grid_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_image_grid_id_seq OWNED BY public._pages_v_blocks_image_grid.id;
 
 
 --
--- Name: _pages_v_blocks_image_grid_images; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_image_grid_images (
@@ -736,10 +737,10 @@ CREATE TABLE public._pages_v_blocks_image_grid_images (
 );
 
 
-ALTER TABLE public._pages_v_blocks_image_grid_images OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_image_grid_images OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_image_grid_images_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_image_grid_images_id_seq
@@ -751,17 +752,17 @@ CREATE SEQUENCE public._pages_v_blocks_image_grid_images_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_image_grid_images_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_image_grid_images_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_image_grid_images_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_image_grid_images_id_seq OWNED BY public._pages_v_blocks_image_grid_images.id;
 
 
 --
--- Name: _pages_v_blocks_product_grid; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_product_grid (
@@ -778,10 +779,10 @@ CREATE TABLE public._pages_v_blocks_product_grid (
 );
 
 
-ALTER TABLE public._pages_v_blocks_product_grid OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_product_grid OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_product_grid_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_product_grid_id_seq
@@ -793,17 +794,17 @@ CREATE SEQUENCE public._pages_v_blocks_product_grid_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_product_grid_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_product_grid_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_product_grid_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_product_grid_id_seq OWNED BY public._pages_v_blocks_product_grid.id;
 
 
 --
--- Name: _pages_v_blocks_product_grid_products; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_products; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_product_grid_products (
@@ -816,10 +817,10 @@ CREATE TABLE public._pages_v_blocks_product_grid_products (
 );
 
 
-ALTER TABLE public._pages_v_blocks_product_grid_products OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_product_grid_products OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_product_grid_products_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_products_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_product_grid_products_id_seq
@@ -831,17 +832,17 @@ CREATE SEQUENCE public._pages_v_blocks_product_grid_products_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_product_grid_products_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_product_grid_products_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_product_grid_products_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_products_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_product_grid_products_id_seq OWNED BY public._pages_v_blocks_product_grid_products.id;
 
 
 --
--- Name: _pages_v_blocks_spacer; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_spacer (
@@ -857,10 +858,10 @@ CREATE TABLE public._pages_v_blocks_spacer (
 );
 
 
-ALTER TABLE public._pages_v_blocks_spacer OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_spacer OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_spacer_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_spacer_id_seq
@@ -872,17 +873,17 @@ CREATE SEQUENCE public._pages_v_blocks_spacer_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_spacer_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_spacer_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_spacer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_spacer_id_seq OWNED BY public._pages_v_blocks_spacer.id;
 
 
 --
--- Name: _pages_v_blocks_text; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_text (
@@ -899,10 +900,10 @@ CREATE TABLE public._pages_v_blocks_text (
 );
 
 
-ALTER TABLE public._pages_v_blocks_text OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_text OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_text_cards; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_text_cards (
@@ -919,10 +920,10 @@ CREATE TABLE public._pages_v_blocks_text_cards (
 );
 
 
-ALTER TABLE public._pages_v_blocks_text_cards OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_text_cards OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_text_cards_cards; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_cards; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_text_cards_cards (
@@ -936,10 +937,10 @@ CREATE TABLE public._pages_v_blocks_text_cards_cards (
 );
 
 
-ALTER TABLE public._pages_v_blocks_text_cards_cards OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_text_cards_cards OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_text_cards_cards_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_cards_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_text_cards_cards_id_seq
@@ -951,17 +952,17 @@ CREATE SEQUENCE public._pages_v_blocks_text_cards_cards_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_text_cards_cards_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_text_cards_cards_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_text_cards_cards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_cards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_text_cards_cards_id_seq OWNED BY public._pages_v_blocks_text_cards_cards.id;
 
 
 --
--- Name: _pages_v_blocks_text_cards_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_text_cards_id_seq
@@ -973,17 +974,17 @@ CREATE SEQUENCE public._pages_v_blocks_text_cards_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_text_cards_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_text_cards_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_text_cards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_text_cards_id_seq OWNED BY public._pages_v_blocks_text_cards.id;
 
 
 --
--- Name: _pages_v_blocks_text_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_text_id_seq
@@ -995,17 +996,17 @@ CREATE SEQUENCE public._pages_v_blocks_text_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_text_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_text_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_text_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_text_id_seq OWNED BY public._pages_v_blocks_text.id;
 
 
 --
--- Name: _pages_v_blocks_text_image; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_text_image (
@@ -1023,10 +1024,10 @@ CREATE TABLE public._pages_v_blocks_text_image (
 );
 
 
-ALTER TABLE public._pages_v_blocks_text_image OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_text_image OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_text_image_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_text_image_id_seq
@@ -1038,17 +1039,17 @@ CREATE SEQUENCE public._pages_v_blocks_text_image_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_text_image_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_text_image_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_text_image_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_text_image_id_seq OWNED BY public._pages_v_blocks_text_image.id;
 
 
 --
--- Name: _pages_v_blocks_three_columns; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_three_columns (
@@ -1065,10 +1066,10 @@ CREATE TABLE public._pages_v_blocks_three_columns (
 );
 
 
-ALTER TABLE public._pages_v_blocks_three_columns OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_three_columns OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_three_columns_cells; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_cells; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_three_columns_cells (
@@ -1081,10 +1082,10 @@ CREATE TABLE public._pages_v_blocks_three_columns_cells (
 );
 
 
-ALTER TABLE public._pages_v_blocks_three_columns_cells OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_three_columns_cells OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_three_columns_cells_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_cells_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_three_columns_cells_id_seq
@@ -1096,17 +1097,17 @@ CREATE SEQUENCE public._pages_v_blocks_three_columns_cells_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_three_columns_cells_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_three_columns_cells_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_three_columns_cells_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_cells_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_three_columns_cells_id_seq OWNED BY public._pages_v_blocks_three_columns_cells.id;
 
 
 --
--- Name: _pages_v_blocks_three_columns_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_three_columns_id_seq
@@ -1118,17 +1119,17 @@ CREATE SEQUENCE public._pages_v_blocks_three_columns_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_three_columns_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_three_columns_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_three_columns_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_three_columns_id_seq OWNED BY public._pages_v_blocks_three_columns.id;
 
 
 --
--- Name: _pages_v_blocks_two_columns; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_two_columns (
@@ -1145,10 +1146,10 @@ CREATE TABLE public._pages_v_blocks_two_columns (
 );
 
 
-ALTER TABLE public._pages_v_blocks_two_columns OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_two_columns OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_two_columns_cells; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_cells; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_blocks_two_columns_cells (
@@ -1161,10 +1162,10 @@ CREATE TABLE public._pages_v_blocks_two_columns_cells (
 );
 
 
-ALTER TABLE public._pages_v_blocks_two_columns_cells OWNER TO strapi;
+ALTER TABLE public._pages_v_blocks_two_columns_cells OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_two_columns_cells_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_cells_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_two_columns_cells_id_seq
@@ -1176,17 +1177,17 @@ CREATE SEQUENCE public._pages_v_blocks_two_columns_cells_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_two_columns_cells_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_two_columns_cells_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_two_columns_cells_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_cells_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_two_columns_cells_id_seq OWNED BY public._pages_v_blocks_two_columns_cells.id;
 
 
 --
--- Name: _pages_v_blocks_two_columns_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_blocks_two_columns_id_seq
@@ -1198,17 +1199,17 @@ CREATE SEQUENCE public._pages_v_blocks_two_columns_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_blocks_two_columns_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_blocks_two_columns_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_blocks_two_columns_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_blocks_two_columns_id_seq OWNED BY public._pages_v_blocks_two_columns.id;
 
 
 --
--- Name: _pages_v_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_id_seq
@@ -1220,17 +1221,17 @@ CREATE SEQUENCE public._pages_v_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_id_seq OWNED BY public._pages_v.id;
 
 
 --
--- Name: _pages_v_locales; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_locales; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_locales (
@@ -1246,10 +1247,10 @@ CREATE TABLE public._pages_v_locales (
 );
 
 
-ALTER TABLE public._pages_v_locales OWNER TO strapi;
+ALTER TABLE public._pages_v_locales OWNER TO odoo;
 
 --
--- Name: _pages_v_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_locales_id_seq
@@ -1261,17 +1262,17 @@ CREATE SEQUENCE public._pages_v_locales_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_locales_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_locales_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_locales_id_seq OWNED BY public._pages_v_locales.id;
 
 
 --
--- Name: _pages_v_rels; Type: TABLE; Schema: public; Owner: strapi
+-- Name: _pages_v_rels; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public._pages_v_rels (
@@ -1285,10 +1286,10 @@ CREATE TABLE public._pages_v_rels (
 );
 
 
-ALTER TABLE public._pages_v_rels OWNER TO strapi;
+ALTER TABLE public._pages_v_rels OWNER TO odoo;
 
 --
--- Name: _pages_v_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: _pages_v_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public._pages_v_rels_id_seq
@@ -1300,17 +1301,17 @@ CREATE SEQUENCE public._pages_v_rels_id_seq
     CACHE 1;
 
 
-ALTER TABLE public._pages_v_rels_id_seq OWNER TO strapi;
+ALTER SEQUENCE public._pages_v_rels_id_seq OWNER TO odoo;
 
 --
--- Name: _pages_v_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: _pages_v_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public._pages_v_rels_id_seq OWNED BY public._pages_v_rels.id;
 
 
 --
--- Name: footers; Type: TABLE; Schema: public; Owner: strapi
+-- Name: footers; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.footers (
@@ -1320,10 +1321,10 @@ CREATE TABLE public.footers (
 );
 
 
-ALTER TABLE public.footers OWNER TO strapi;
+ALTER TABLE public.footers OWNER TO odoo;
 
 --
--- Name: footers_columns; Type: TABLE; Schema: public; Owner: strapi
+-- Name: footers_columns; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.footers_columns (
@@ -1336,10 +1337,10 @@ CREATE TABLE public.footers_columns (
 );
 
 
-ALTER TABLE public.footers_columns OWNER TO strapi;
+ALTER TABLE public.footers_columns OWNER TO odoo;
 
 --
--- Name: footers_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: footers_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.footers_id_seq
@@ -1351,17 +1352,17 @@ CREATE SEQUENCE public.footers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.footers_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.footers_id_seq OWNER TO odoo;
 
 --
--- Name: footers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: footers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.footers_id_seq OWNED BY public.footers.id;
 
 
 --
--- Name: footers_locales; Type: TABLE; Schema: public; Owner: strapi
+-- Name: footers_locales; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.footers_locales (
@@ -1373,10 +1374,10 @@ CREATE TABLE public.footers_locales (
 );
 
 
-ALTER TABLE public.footers_locales OWNER TO strapi;
+ALTER TABLE public.footers_locales OWNER TO odoo;
 
 --
--- Name: footers_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: footers_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.footers_locales_id_seq
@@ -1388,17 +1389,17 @@ CREATE SEQUENCE public.footers_locales_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.footers_locales_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.footers_locales_id_seq OWNER TO odoo;
 
 --
--- Name: footers_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: footers_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.footers_locales_id_seq OWNED BY public.footers_locales.id;
 
 
 --
--- Name: headers; Type: TABLE; Schema: public; Owner: strapi
+-- Name: headers; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.headers (
@@ -1408,10 +1409,10 @@ CREATE TABLE public.headers (
 );
 
 
-ALTER TABLE public.headers OWNER TO strapi;
+ALTER TABLE public.headers OWNER TO odoo;
 
 --
--- Name: headers_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: headers_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.headers_id_seq
@@ -1423,17 +1424,17 @@ CREATE SEQUENCE public.headers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.headers_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.headers_id_seq OWNER TO odoo;
 
 --
--- Name: headers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: headers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.headers_id_seq OWNED BY public.headers.id;
 
 
 --
--- Name: headers_locales; Type: TABLE; Schema: public; Owner: strapi
+-- Name: headers_locales; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.headers_locales (
@@ -1445,10 +1446,10 @@ CREATE TABLE public.headers_locales (
 );
 
 
-ALTER TABLE public.headers_locales OWNER TO strapi;
+ALTER TABLE public.headers_locales OWNER TO odoo;
 
 --
--- Name: headers_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: headers_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.headers_locales_id_seq
@@ -1460,17 +1461,17 @@ CREATE SEQUENCE public.headers_locales_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.headers_locales_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.headers_locales_id_seq OWNER TO odoo;
 
 --
--- Name: headers_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: headers_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.headers_locales_id_seq OWNED BY public.headers_locales.id;
 
 
 --
--- Name: headers_navigation; Type: TABLE; Schema: public; Owner: strapi
+-- Name: headers_navigation; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.headers_navigation (
@@ -1484,10 +1485,10 @@ CREATE TABLE public.headers_navigation (
 );
 
 
-ALTER TABLE public.headers_navigation OWNER TO strapi;
+ALTER TABLE public.headers_navigation OWNER TO odoo;
 
 --
--- Name: headers_navigation_link_navigation_child; Type: TABLE; Schema: public; Owner: strapi
+-- Name: headers_navigation_link_navigation_child; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.headers_navigation_link_navigation_child (
@@ -1501,10 +1502,10 @@ CREATE TABLE public.headers_navigation_link_navigation_child (
 );
 
 
-ALTER TABLE public.headers_navigation_link_navigation_child OWNER TO strapi;
+ALTER TABLE public.headers_navigation_link_navigation_child OWNER TO odoo;
 
 --
--- Name: headers_rels; Type: TABLE; Schema: public; Owner: strapi
+-- Name: headers_rels; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.headers_rels (
@@ -1516,10 +1517,10 @@ CREATE TABLE public.headers_rels (
 );
 
 
-ALTER TABLE public.headers_rels OWNER TO strapi;
+ALTER TABLE public.headers_rels OWNER TO odoo;
 
 --
--- Name: headers_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: headers_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.headers_rels_id_seq
@@ -1531,17 +1532,17 @@ CREATE SEQUENCE public.headers_rels_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.headers_rels_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.headers_rels_id_seq OWNER TO odoo;
 
 --
--- Name: headers_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: headers_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.headers_rels_id_seq OWNED BY public.headers_rels.id;
 
 
 --
--- Name: media; Type: TABLE; Schema: public; Owner: strapi
+-- Name: media; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.media (
@@ -1604,10 +1605,10 @@ CREATE TABLE public.media (
 );
 
 
-ALTER TABLE public.media OWNER TO strapi;
+ALTER TABLE public.media OWNER TO odoo;
 
 --
--- Name: media_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: media_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.media_id_seq
@@ -1619,17 +1620,17 @@ CREATE SEQUENCE public.media_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.media_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.media_id_seq OWNER TO odoo;
 
 --
--- Name: media_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: media_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.media_id_seq OWNED BY public.media.id;
 
 
 --
--- Name: media_rels; Type: TABLE; Schema: public; Owner: strapi
+-- Name: media_rels; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.media_rels (
@@ -1641,10 +1642,10 @@ CREATE TABLE public.media_rels (
 );
 
 
-ALTER TABLE public.media_rels OWNER TO strapi;
+ALTER TABLE public.media_rels OWNER TO odoo;
 
 --
--- Name: media_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: media_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.media_rels_id_seq
@@ -1656,17 +1657,17 @@ CREATE SEQUENCE public.media_rels_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.media_rels_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.media_rels_id_seq OWNER TO odoo;
 
 --
--- Name: media_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: media_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.media_rels_id_seq OWNED BY public.media_rels.id;
 
 
 --
--- Name: media_tag; Type: TABLE; Schema: public; Owner: strapi
+-- Name: media_tag; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.media_tag (
@@ -1677,10 +1678,10 @@ CREATE TABLE public.media_tag (
 );
 
 
-ALTER TABLE public.media_tag OWNER TO strapi;
+ALTER TABLE public.media_tag OWNER TO odoo;
 
 --
--- Name: media_tag_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: media_tag_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.media_tag_id_seq
@@ -1692,17 +1693,17 @@ CREATE SEQUENCE public.media_tag_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.media_tag_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.media_tag_id_seq OWNER TO odoo;
 
 --
--- Name: media_tag_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: media_tag_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.media_tag_id_seq OWNED BY public.media_tag.id;
 
 
 --
--- Name: pages; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages (
@@ -1716,10 +1717,10 @@ CREATE TABLE public.pages (
 );
 
 
-ALTER TABLE public.pages OWNER TO strapi;
+ALTER TABLE public.pages OWNER TO odoo;
 
 --
--- Name: pages_blocks_banner; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_banner; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_banner (
@@ -1736,10 +1737,10 @@ CREATE TABLE public.pages_blocks_banner (
 );
 
 
-ALTER TABLE public.pages_blocks_banner OWNER TO strapi;
+ALTER TABLE public.pages_blocks_banner OWNER TO odoo;
 
 --
--- Name: pages_blocks_benefits; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_benefits (
@@ -1752,10 +1753,10 @@ CREATE TABLE public.pages_blocks_benefits (
 );
 
 
-ALTER TABLE public.pages_blocks_benefits OWNER TO strapi;
+ALTER TABLE public.pages_blocks_benefits OWNER TO odoo;
 
 --
--- Name: pages_blocks_benefits_benefits; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_benefits; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_benefits_benefits (
@@ -1770,10 +1771,10 @@ CREATE TABLE public.pages_blocks_benefits_benefits (
 );
 
 
-ALTER TABLE public.pages_blocks_benefits_benefits OWNER TO strapi;
+ALTER TABLE public.pages_blocks_benefits_benefits OWNER TO odoo;
 
 --
--- Name: pages_blocks_cards; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_cards (
@@ -1789,10 +1790,10 @@ CREATE TABLE public.pages_blocks_cards (
 );
 
 
-ALTER TABLE public.pages_blocks_cards OWNER TO strapi;
+ALTER TABLE public.pages_blocks_cards OWNER TO odoo;
 
 --
--- Name: pages_blocks_cards_cards; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_cards; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_cards_cards (
@@ -1805,10 +1806,10 @@ CREATE TABLE public.pages_blocks_cards_cards (
 );
 
 
-ALTER TABLE public.pages_blocks_cards_cards OWNER TO strapi;
+ALTER TABLE public.pages_blocks_cards_cards OWNER TO odoo;
 
 --
--- Name: pages_blocks_hero; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_hero; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_hero (
@@ -1825,10 +1826,10 @@ CREATE TABLE public.pages_blocks_hero (
 );
 
 
-ALTER TABLE public.pages_blocks_hero OWNER TO strapi;
+ALTER TABLE public.pages_blocks_hero OWNER TO odoo;
 
 --
--- Name: pages_blocks_image_grid; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_image_grid (
@@ -1843,10 +1844,10 @@ CREATE TABLE public.pages_blocks_image_grid (
 );
 
 
-ALTER TABLE public.pages_blocks_image_grid OWNER TO strapi;
+ALTER TABLE public.pages_blocks_image_grid OWNER TO odoo;
 
 --
--- Name: pages_blocks_image_grid_images; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_images; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_image_grid_images (
@@ -1863,10 +1864,10 @@ CREATE TABLE public.pages_blocks_image_grid_images (
 );
 
 
-ALTER TABLE public.pages_blocks_image_grid_images OWNER TO strapi;
+ALTER TABLE public.pages_blocks_image_grid_images OWNER TO odoo;
 
 --
--- Name: pages_blocks_product_grid; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_product_grid (
@@ -1882,10 +1883,10 @@ CREATE TABLE public.pages_blocks_product_grid (
 );
 
 
-ALTER TABLE public.pages_blocks_product_grid OWNER TO strapi;
+ALTER TABLE public.pages_blocks_product_grid OWNER TO odoo;
 
 --
--- Name: pages_blocks_product_grid_products; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid_products; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_product_grid_products (
@@ -1897,10 +1898,10 @@ CREATE TABLE public.pages_blocks_product_grid_products (
 );
 
 
-ALTER TABLE public.pages_blocks_product_grid_products OWNER TO strapi;
+ALTER TABLE public.pages_blocks_product_grid_products OWNER TO odoo;
 
 --
--- Name: pages_blocks_spacer; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_spacer; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_spacer (
@@ -1915,10 +1916,10 @@ CREATE TABLE public.pages_blocks_spacer (
 );
 
 
-ALTER TABLE public.pages_blocks_spacer OWNER TO strapi;
+ALTER TABLE public.pages_blocks_spacer OWNER TO odoo;
 
 --
--- Name: pages_blocks_text; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_text; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_text (
@@ -1934,10 +1935,10 @@ CREATE TABLE public.pages_blocks_text (
 );
 
 
-ALTER TABLE public.pages_blocks_text OWNER TO strapi;
+ALTER TABLE public.pages_blocks_text OWNER TO odoo;
 
 --
--- Name: pages_blocks_text_cards; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_text_cards (
@@ -1953,10 +1954,10 @@ CREATE TABLE public.pages_blocks_text_cards (
 );
 
 
-ALTER TABLE public.pages_blocks_text_cards OWNER TO strapi;
+ALTER TABLE public.pages_blocks_text_cards OWNER TO odoo;
 
 --
--- Name: pages_blocks_text_cards_cards; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards_cards; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_text_cards_cards (
@@ -1969,10 +1970,10 @@ CREATE TABLE public.pages_blocks_text_cards_cards (
 );
 
 
-ALTER TABLE public.pages_blocks_text_cards_cards OWNER TO strapi;
+ALTER TABLE public.pages_blocks_text_cards_cards OWNER TO odoo;
 
 --
--- Name: pages_blocks_text_image; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_image; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_text_image (
@@ -1989,10 +1990,10 @@ CREATE TABLE public.pages_blocks_text_image (
 );
 
 
-ALTER TABLE public.pages_blocks_text_image OWNER TO strapi;
+ALTER TABLE public.pages_blocks_text_image OWNER TO odoo;
 
 --
--- Name: pages_blocks_three_columns; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_three_columns (
@@ -2008,10 +2009,10 @@ CREATE TABLE public.pages_blocks_three_columns (
 );
 
 
-ALTER TABLE public.pages_blocks_three_columns OWNER TO strapi;
+ALTER TABLE public.pages_blocks_three_columns OWNER TO odoo;
 
 --
--- Name: pages_blocks_three_columns_cells; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns_cells; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_three_columns_cells (
@@ -2023,10 +2024,10 @@ CREATE TABLE public.pages_blocks_three_columns_cells (
 );
 
 
-ALTER TABLE public.pages_blocks_three_columns_cells OWNER TO strapi;
+ALTER TABLE public.pages_blocks_three_columns_cells OWNER TO odoo;
 
 --
--- Name: pages_blocks_two_columns; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_two_columns (
@@ -2042,10 +2043,10 @@ CREATE TABLE public.pages_blocks_two_columns (
 );
 
 
-ALTER TABLE public.pages_blocks_two_columns OWNER TO strapi;
+ALTER TABLE public.pages_blocks_two_columns OWNER TO odoo;
 
 --
--- Name: pages_blocks_two_columns_cells; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns_cells; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_blocks_two_columns_cells (
@@ -2057,10 +2058,10 @@ CREATE TABLE public.pages_blocks_two_columns_cells (
 );
 
 
-ALTER TABLE public.pages_blocks_two_columns_cells OWNER TO strapi;
+ALTER TABLE public.pages_blocks_two_columns_cells OWNER TO odoo;
 
 --
--- Name: pages_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: pages_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.pages_id_seq
@@ -2072,17 +2073,17 @@ CREATE SEQUENCE public.pages_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.pages_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.pages_id_seq OWNER TO odoo;
 
 --
--- Name: pages_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: pages_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.pages_id_seq OWNED BY public.pages.id;
 
 
 --
--- Name: pages_locales; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_locales; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_locales (
@@ -2098,10 +2099,10 @@ CREATE TABLE public.pages_locales (
 );
 
 
-ALTER TABLE public.pages_locales OWNER TO strapi;
+ALTER TABLE public.pages_locales OWNER TO odoo;
 
 --
--- Name: pages_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: pages_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.pages_locales_id_seq
@@ -2113,17 +2114,17 @@ CREATE SEQUENCE public.pages_locales_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.pages_locales_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.pages_locales_id_seq OWNER TO odoo;
 
 --
--- Name: pages_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: pages_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.pages_locales_id_seq OWNED BY public.pages_locales.id;
 
 
 --
--- Name: pages_rels; Type: TABLE; Schema: public; Owner: strapi
+-- Name: pages_rels; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.pages_rels (
@@ -2137,10 +2138,10 @@ CREATE TABLE public.pages_rels (
 );
 
 
-ALTER TABLE public.pages_rels OWNER TO strapi;
+ALTER TABLE public.pages_rels OWNER TO odoo;
 
 --
--- Name: pages_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: pages_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.pages_rels_id_seq
@@ -2152,17 +2153,17 @@ CREATE SEQUENCE public.pages_rels_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.pages_rels_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.pages_rels_id_seq OWNER TO odoo;
 
 --
--- Name: pages_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: pages_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.pages_rels_id_seq OWNED BY public.pages_rels.id;
 
 
 --
--- Name: payload_jobs; Type: TABLE; Schema: public; Owner: strapi
+-- Name: payload_jobs; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.payload_jobs (
@@ -2181,10 +2182,10 @@ CREATE TABLE public.payload_jobs (
 );
 
 
-ALTER TABLE public.payload_jobs OWNER TO strapi;
+ALTER TABLE public.payload_jobs OWNER TO odoo;
 
 --
--- Name: payload_jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: payload_jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.payload_jobs_id_seq
@@ -2196,17 +2197,17 @@ CREATE SEQUENCE public.payload_jobs_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.payload_jobs_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.payload_jobs_id_seq OWNER TO odoo;
 
 --
--- Name: payload_jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: payload_jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.payload_jobs_id_seq OWNED BY public.payload_jobs.id;
 
 
 --
--- Name: payload_jobs_log; Type: TABLE; Schema: public; Owner: strapi
+-- Name: payload_jobs_log; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.payload_jobs_log (
@@ -2224,10 +2225,10 @@ CREATE TABLE public.payload_jobs_log (
 );
 
 
-ALTER TABLE public.payload_jobs_log OWNER TO strapi;
+ALTER TABLE public.payload_jobs_log OWNER TO odoo;
 
 --
--- Name: payload_locked_documents; Type: TABLE; Schema: public; Owner: strapi
+-- Name: payload_locked_documents; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.payload_locked_documents (
@@ -2238,10 +2239,10 @@ CREATE TABLE public.payload_locked_documents (
 );
 
 
-ALTER TABLE public.payload_locked_documents OWNER TO strapi;
+ALTER TABLE public.payload_locked_documents OWNER TO odoo;
 
 --
--- Name: payload_locked_documents_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.payload_locked_documents_id_seq
@@ -2253,17 +2254,17 @@ CREATE SEQUENCE public.payload_locked_documents_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.payload_locked_documents_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.payload_locked_documents_id_seq OWNER TO odoo;
 
 --
--- Name: payload_locked_documents_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.payload_locked_documents_id_seq OWNED BY public.payload_locked_documents.id;
 
 
 --
--- Name: payload_locked_documents_rels; Type: TABLE; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.payload_locked_documents_rels (
@@ -2283,10 +2284,10 @@ CREATE TABLE public.payload_locked_documents_rels (
 );
 
 
-ALTER TABLE public.payload_locked_documents_rels OWNER TO strapi;
+ALTER TABLE public.payload_locked_documents_rels OWNER TO odoo;
 
 --
--- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.payload_locked_documents_rels_id_seq
@@ -2298,17 +2299,17 @@ CREATE SEQUENCE public.payload_locked_documents_rels_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.payload_locked_documents_rels_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.payload_locked_documents_rels_id_seq OWNER TO odoo;
 
 --
--- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.payload_locked_documents_rels_id_seq OWNED BY public.payload_locked_documents_rels.id;
 
 
 --
--- Name: payload_migrations; Type: TABLE; Schema: public; Owner: strapi
+-- Name: payload_migrations; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.payload_migrations (
@@ -2320,10 +2321,10 @@ CREATE TABLE public.payload_migrations (
 );
 
 
-ALTER TABLE public.payload_migrations OWNER TO strapi;
+ALTER TABLE public.payload_migrations OWNER TO odoo;
 
 --
--- Name: payload_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: payload_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.payload_migrations_id_seq
@@ -2335,17 +2336,17 @@ CREATE SEQUENCE public.payload_migrations_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.payload_migrations_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.payload_migrations_id_seq OWNER TO odoo;
 
 --
--- Name: payload_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: payload_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.payload_migrations_id_seq OWNED BY public.payload_migrations.id;
 
 
 --
--- Name: payload_preferences; Type: TABLE; Schema: public; Owner: strapi
+-- Name: payload_preferences; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.payload_preferences (
@@ -2357,10 +2358,10 @@ CREATE TABLE public.payload_preferences (
 );
 
 
-ALTER TABLE public.payload_preferences OWNER TO strapi;
+ALTER TABLE public.payload_preferences OWNER TO odoo;
 
 --
--- Name: payload_preferences_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: payload_preferences_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.payload_preferences_id_seq
@@ -2372,17 +2373,17 @@ CREATE SEQUENCE public.payload_preferences_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.payload_preferences_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.payload_preferences_id_seq OWNER TO odoo;
 
 --
--- Name: payload_preferences_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: payload_preferences_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.payload_preferences_id_seq OWNED BY public.payload_preferences.id;
 
 
 --
--- Name: payload_preferences_rels; Type: TABLE; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.payload_preferences_rels (
@@ -2394,10 +2395,10 @@ CREATE TABLE public.payload_preferences_rels (
 );
 
 
-ALTER TABLE public.payload_preferences_rels OWNER TO strapi;
+ALTER TABLE public.payload_preferences_rels OWNER TO odoo;
 
 --
--- Name: payload_preferences_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.payload_preferences_rels_id_seq
@@ -2409,17 +2410,17 @@ CREATE SEQUENCE public.payload_preferences_rels_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.payload_preferences_rels_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.payload_preferences_rels_id_seq OWNER TO odoo;
 
 --
--- Name: payload_preferences_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.payload_preferences_rels_id_seq OWNED BY public.payload_preferences_rels.id;
 
 
 --
--- Name: search; Type: TABLE; Schema: public; Owner: strapi
+-- Name: search; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.search (
@@ -2434,10 +2435,10 @@ CREATE TABLE public.search (
 );
 
 
-ALTER TABLE public.search OWNER TO strapi;
+ALTER TABLE public.search OWNER TO odoo;
 
 --
--- Name: search_categories; Type: TABLE; Schema: public; Owner: strapi
+-- Name: search_categories; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.search_categories (
@@ -2449,10 +2450,10 @@ CREATE TABLE public.search_categories (
 );
 
 
-ALTER TABLE public.search_categories OWNER TO strapi;
+ALTER TABLE public.search_categories OWNER TO odoo;
 
 --
--- Name: search_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: search_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.search_id_seq
@@ -2464,17 +2465,17 @@ CREATE SEQUENCE public.search_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.search_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.search_id_seq OWNER TO odoo;
 
 --
--- Name: search_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: search_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.search_id_seq OWNED BY public.search.id;
 
 
 --
--- Name: search_locales; Type: TABLE; Schema: public; Owner: strapi
+-- Name: search_locales; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.search_locales (
@@ -2485,10 +2486,10 @@ CREATE TABLE public.search_locales (
 );
 
 
-ALTER TABLE public.search_locales OWNER TO strapi;
+ALTER TABLE public.search_locales OWNER TO odoo;
 
 --
--- Name: search_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: search_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.search_locales_id_seq
@@ -2500,17 +2501,17 @@ CREATE SEQUENCE public.search_locales_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.search_locales_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.search_locales_id_seq OWNER TO odoo;
 
 --
--- Name: search_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: search_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.search_locales_id_seq OWNED BY public.search_locales.id;
 
 
 --
--- Name: search_rels; Type: TABLE; Schema: public; Owner: strapi
+-- Name: search_rels; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.search_rels (
@@ -2522,10 +2523,10 @@ CREATE TABLE public.search_rels (
 );
 
 
-ALTER TABLE public.search_rels OWNER TO strapi;
+ALTER TABLE public.search_rels OWNER TO odoo;
 
 --
--- Name: search_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: search_rels_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.search_rels_id_seq
@@ -2537,17 +2538,17 @@ CREATE SEQUENCE public.search_rels_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.search_rels_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.search_rels_id_seq OWNER TO odoo;
 
 --
--- Name: search_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: search_rels_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.search_rels_id_seq OWNED BY public.search_rels.id;
 
 
 --
--- Name: tenants; Type: TABLE; Schema: public; Owner: strapi
+-- Name: tenants; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.tenants (
@@ -2562,10 +2563,10 @@ CREATE TABLE public.tenants (
 );
 
 
-ALTER TABLE public.tenants OWNER TO strapi;
+ALTER TABLE public.tenants OWNER TO odoo;
 
 --
--- Name: tenants_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: tenants_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.tenants_id_seq
@@ -2577,17 +2578,17 @@ CREATE SEQUENCE public.tenants_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tenants_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.tenants_id_seq OWNER TO odoo;
 
 --
--- Name: tenants_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: tenants_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.tenants_id_seq OWNED BY public.tenants.id;
 
 
 --
--- Name: tenants_locales; Type: TABLE; Schema: public; Owner: strapi
+-- Name: tenants_locales; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.tenants_locales (
@@ -2602,10 +2603,10 @@ CREATE TABLE public.tenants_locales (
 );
 
 
-ALTER TABLE public.tenants_locales OWNER TO strapi;
+ALTER TABLE public.tenants_locales OWNER TO odoo;
 
 --
--- Name: tenants_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: tenants_locales_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.tenants_locales_id_seq
@@ -2617,17 +2618,17 @@ CREATE SEQUENCE public.tenants_locales_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tenants_locales_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.tenants_locales_id_seq OWNER TO odoo;
 
 --
--- Name: tenants_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: tenants_locales_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.tenants_locales_id_seq OWNED BY public.tenants_locales.id;
 
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: strapi
+-- Name: users; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.users (
@@ -2644,10 +2645,10 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO strapi;
+ALTER TABLE public.users OWNER TO odoo;
 
 --
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: strapi
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: odoo
 --
 
 CREATE SEQUENCE public.users_id_seq
@@ -2659,17 +2660,17 @@ CREATE SEQUENCE public.users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.users_id_seq OWNER TO strapi;
+ALTER SEQUENCE public.users_id_seq OWNER TO odoo;
 
 --
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: strapi
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: odoo
 --
 
 ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- Name: users_sessions; Type: TABLE; Schema: public; Owner: strapi
+-- Name: users_sessions; Type: TABLE; Schema: public; Owner: odoo
 --
 
 CREATE TABLE public.users_sessions (
@@ -2681,325 +2682,325 @@ CREATE TABLE public.users_sessions (
 );
 
 
-ALTER TABLE public.users_sessions OWNER TO strapi;
+ALTER TABLE public.users_sessions OWNER TO odoo;
 
 --
--- Name: _pages_v id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v ALTER COLUMN id SET DEFAULT nextval('public._pages_v_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_banner id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_banner ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_banner_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_benefits id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_benefits ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_benefits_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_benefits_benefits id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_benefits_benefits ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_benefits_benefits_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_cards id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_cards ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_cards_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_cards_cards id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_cards_cards ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_cards_cards_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_hero id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_hero ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_hero_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_image_grid id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_image_grid ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_image_grid_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_image_grid_images id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_image_grid_images ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_image_grid_images_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_product_grid id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_product_grid ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_product_grid_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_product_grid_products id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_products id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_product_grid_products ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_product_grid_products_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_spacer id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_spacer ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_spacer_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_text id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_text_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_text_cards id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text_cards ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_text_cards_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_text_cards_cards id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_cards id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text_cards_cards ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_text_cards_cards_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_text_image id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text_image ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_text_image_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_three_columns id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_three_columns ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_three_columns_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_three_columns_cells id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_cells id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_three_columns_cells ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_three_columns_cells_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_two_columns id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_two_columns ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_two_columns_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_blocks_two_columns_cells id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_cells id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_two_columns_cells ALTER COLUMN id SET DEFAULT nextval('public._pages_v_blocks_two_columns_cells_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_locales id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_locales id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_locales ALTER COLUMN id SET DEFAULT nextval('public._pages_v_locales_id_seq'::regclass);
 
 
 --
--- Name: _pages_v_rels id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: _pages_v_rels id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_rels ALTER COLUMN id SET DEFAULT nextval('public._pages_v_rels_id_seq'::regclass);
 
 
 --
--- Name: footers id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: footers id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.footers ALTER COLUMN id SET DEFAULT nextval('public.footers_id_seq'::regclass);
 
 
 --
--- Name: footers_locales id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: footers_locales id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.footers_locales ALTER COLUMN id SET DEFAULT nextval('public.footers_locales_id_seq'::regclass);
 
 
 --
--- Name: headers id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: headers id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers ALTER COLUMN id SET DEFAULT nextval('public.headers_id_seq'::regclass);
 
 
 --
--- Name: headers_locales id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: headers_locales id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_locales ALTER COLUMN id SET DEFAULT nextval('public.headers_locales_id_seq'::regclass);
 
 
 --
--- Name: headers_rels id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: headers_rels id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_rels ALTER COLUMN id SET DEFAULT nextval('public.headers_rels_id_seq'::regclass);
 
 
 --
--- Name: media id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: media id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.media ALTER COLUMN id SET DEFAULT nextval('public.media_id_seq'::regclass);
 
 
 --
--- Name: media_rels id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: media_rels id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.media_rels ALTER COLUMN id SET DEFAULT nextval('public.media_rels_id_seq'::regclass);
 
 
 --
--- Name: media_tag id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: media_tag id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.media_tag ALTER COLUMN id SET DEFAULT nextval('public.media_tag_id_seq'::regclass);
 
 
 --
--- Name: pages id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: pages id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages ALTER COLUMN id SET DEFAULT nextval('public.pages_id_seq'::regclass);
 
 
 --
--- Name: pages_locales id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: pages_locales id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_locales ALTER COLUMN id SET DEFAULT nextval('public.pages_locales_id_seq'::regclass);
 
 
 --
--- Name: pages_rels id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: pages_rels id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_rels ALTER COLUMN id SET DEFAULT nextval('public.pages_rels_id_seq'::regclass);
 
 
 --
--- Name: payload_jobs id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: payload_jobs id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_jobs ALTER COLUMN id SET DEFAULT nextval('public.payload_jobs_id_seq'::regclass);
 
 
 --
--- Name: payload_locked_documents id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents ALTER COLUMN id SET DEFAULT nextval('public.payload_locked_documents_id_seq'::regclass);
 
 
 --
--- Name: payload_locked_documents_rels id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels ALTER COLUMN id SET DEFAULT nextval('public.payload_locked_documents_rels_id_seq'::regclass);
 
 
 --
--- Name: payload_migrations id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: payload_migrations id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_migrations ALTER COLUMN id SET DEFAULT nextval('public.payload_migrations_id_seq'::regclass);
 
 
 --
--- Name: payload_preferences id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: payload_preferences id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_preferences ALTER COLUMN id SET DEFAULT nextval('public.payload_preferences_id_seq'::regclass);
 
 
 --
--- Name: payload_preferences_rels id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_preferences_rels ALTER COLUMN id SET DEFAULT nextval('public.payload_preferences_rels_id_seq'::regclass);
 
 
 --
--- Name: search id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: search id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search ALTER COLUMN id SET DEFAULT nextval('public.search_id_seq'::regclass);
 
 
 --
--- Name: search_locales id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: search_locales id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search_locales ALTER COLUMN id SET DEFAULT nextval('public.search_locales_id_seq'::regclass);
 
 
 --
--- Name: search_rels id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: search_rels id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search_rels ALTER COLUMN id SET DEFAULT nextval('public.search_rels_id_seq'::regclass);
 
 
 --
--- Name: tenants id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: tenants id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.tenants ALTER COLUMN id SET DEFAULT nextval('public.tenants_id_seq'::regclass);
 
 
 --
--- Name: tenants_locales id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: tenants_locales id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.tenants_locales ALTER COLUMN id SET DEFAULT nextval('public.tenants_locales_id_seq'::regclass);
 
 
 --
--- Name: users id; Type: DEFAULT; Schema: public; Owner: strapi
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
--- Data for Name: _pages_v; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v (id, parent_id, version_tenant_id, version_parent_id, version_published_at, version_updated_at, version_created_at, version__status, created_at, updated_at, snapshot, published_locale, latest) FROM stdin;
@@ -3057,7 +3058,7 @@ COPY public._pages_v (id, parent_id, version_tenant_id, version_parent_id, versi
 
 
 --
--- Data for Name: _pages_v_blocks_banner; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_banner; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_banner (_order, _parent_id, _path, _locale, id, enabled, background, content, background_image_id, _uuid, block_name) FROM stdin;
@@ -3067,7 +3068,7 @@ COPY public._pages_v_blocks_banner (_order, _parent_id, _path, _locale, id, enab
 
 
 --
--- Data for Name: _pages_v_blocks_benefits; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_benefits; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_benefits (_order, _parent_id, _path, _locale, id, _uuid, block_name) FROM stdin;
@@ -3162,7 +3163,7 @@ COPY public._pages_v_blocks_benefits (_order, _parent_id, _path, _locale, id, _u
 
 
 --
--- Data for Name: _pages_v_blocks_benefits_benefits; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_benefits_benefits; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_benefits_benefits (_order, _parent_id, _locale, id, enabled, title, subtitle, icon_id, _uuid) FROM stdin;
@@ -3431,7 +3432,7 @@ COPY public._pages_v_blocks_benefits_benefits (_order, _parent_id, _locale, id, 
 
 
 --
--- Data for Name: _pages_v_blocks_cards; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_cards; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_cards (_order, _parent_id, _path, _locale, id, enabled, content, background, _uuid, block_name) FROM stdin;
@@ -3443,7 +3444,7 @@ COPY public._pages_v_blocks_cards (_order, _parent_id, _path, _locale, id, enabl
 
 
 --
--- Data for Name: _pages_v_blocks_cards_cards; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_cards_cards; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_cards_cards (_order, _parent_id, _locale, id, image_id, content, _uuid) FROM stdin;
@@ -3463,7 +3464,7 @@ COPY public._pages_v_blocks_cards_cards (_order, _parent_id, _locale, id, image_
 
 
 --
--- Data for Name: _pages_v_blocks_hero; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_hero; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_hero (_order, _parent_id, _path, _locale, id, enabled, content, background_image_id, background, _uuid, block_name) FROM stdin;
@@ -3563,7 +3564,7 @@ COPY public._pages_v_blocks_hero (_order, _parent_id, _path, _locale, id, enable
 
 
 --
--- Data for Name: _pages_v_blocks_image_grid; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_image_grid; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_image_grid (_order, _parent_id, _path, _locale, id, enabled, intro, _uuid, block_name) FROM stdin;
@@ -3656,7 +3657,7 @@ COPY public._pages_v_blocks_image_grid (_order, _parent_id, _path, _locale, id, 
 
 
 --
--- Data for Name: _pages_v_blocks_image_grid_images; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_image_grid_images; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_image_grid_images (_order, _parent_id, _locale, id, image_id, caption, has_link, link_type, link_new_tab, link_url, _uuid) FROM stdin;
@@ -3681,6 +3682,7 @@ COPY public._pages_v_blocks_image_grid_images (_order, _parent_id, _locale, id, 
 1	33	fr	119	7	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e3f3cacf410cb456fbc0
 2	33	fr	120	8	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e4f6cacf410cb456fbc2
 3	33	fr	121	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e504cacf410cb456fbc4
+3	62	en	237	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Sed quis ante nec enim fringilla laoreet.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab28231
 4	33	fr	122	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e8ebcacf410cb456fbcf
 1	34	fr	123	7	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e3f3cacf410cb456fbc0
 2	34	fr	124	8	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e4f6cacf410cb456fbc2
@@ -3702,6 +3704,7 @@ COPY public._pages_v_blocks_image_grid_images (_order, _parent_id, _locale, id, 
 1	38	fr	139	7	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e3f3cacf410cb456fbc0
 2	38	fr	140	8	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e4f6cacf410cb456fbc2
 3	38	fr	141	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e504cacf410cb456fbc4
+4	62	en	238	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab28232
 4	38	fr	142	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e8ebcacf410cb456fbcf
 1	39	fr	143	7	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e3f3cacf410cb456fbc0
 2	39	fr	144	8	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e4f6cacf410cb456fbc2
@@ -3794,8 +3797,6 @@ COPY public._pages_v_blocks_image_grid_images (_order, _parent_id, _locale, id, 
 4	61	fr	234	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e8ebcacf410cb456fbcf
 1	62	en	235	7	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": " Fusce eget mauris mollis nisl dapibus tincidunt.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab2822f
 2	62	en	236	8	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Curabitur posuere nisl quis nisl dignissim, vel ultrices ex luctus.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab28230
-3	62	en	237	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Sed quis ante nec enim fringilla laoreet.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab28231
-4	62	en	238	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab28232
 1	63	fr	239	7	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e3f3cacf410cb456fbc0
 2	63	fr	240	8	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e4f6cacf410cb456fbc2
 3	63	fr	241	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e504cacf410cb456fbc4
@@ -3807,6 +3808,7 @@ COPY public._pages_v_blocks_image_grid_images (_order, _parent_id, _locale, id, 
 1	65	fr	247	7	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e3f3cacf410cb456fbc0
 2	65	fr	248	8	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e4f6cacf410cb456fbc2
 3	65	fr	249	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e504cacf410cb456fbc4
+4	98	en	382	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab28232
 4	65	fr	250	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e8ebcacf410cb456fbcf
 1	66	en	251	7	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": " Fusce eget mauris mollis nisl dapibus tincidunt.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab2822f
 2	66	en	252	8	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Curabitur posuere nisl quis nisl dignissim, vel ultrices ex luctus.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab28230
@@ -3939,7 +3941,6 @@ COPY public._pages_v_blocks_image_grid_images (_order, _parent_id, _locale, id, 
 1	98	en	379	7	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": " Fusce eget mauris mollis nisl dapibus tincidunt.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab2822f
 2	98	en	380	8	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Curabitur posuere nisl quis nisl dignissim, vel ultrices ex luctus.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab28230
 3	98	en	381	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Sed quis ante nec enim fringilla laoreet.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab28231
-4	98	en	382	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "type": "text", "style": "", "detail": 0, "format": 0, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 0}], "direction": "ltr"}}	f	reference	\N	\N	68c2ff9577cd2ffbdab28232
 1	99	fr	383	7	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e3f3cacf410cb456fbc0
 2	99	fr	384	8	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e4f6cacf410cb456fbc2
 3	99	fr	385	10	{"root": {"type": "root", "format": "", "indent": 0, "version": 1, "children": [{"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [{"mode": "normal", "text": "Une table à manger en bois massif, parfaite pour une ambiance conviviale et moderne.", "type": "text", "style": "", "detail": 0, "format": 2, "version": 1}], "direction": "ltr", "textStyle": "", "textFormat": 2}, {"type": "paragraph", "format": "", "indent": 0, "version": 1, "children": [], "direction": null, "textStyle": "", "textFormat": 0}], "direction": "ltr", "textFormat": 2}}	f	reference	\N	\N	68c1e504cacf410cb456fbc4
@@ -4004,7 +4005,7 @@ COPY public._pages_v_blocks_image_grid_images (_order, _parent_id, _locale, id, 
 
 
 --
--- Data for Name: _pages_v_blocks_product_grid; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_product_grid; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_product_grid (_order, _parent_id, _path, _locale, id, enabled, title, _uuid, block_name, background) FROM stdin;
@@ -4082,7 +4083,7 @@ COPY public._pages_v_blocks_product_grid (_order, _parent_id, _path, _locale, id
 
 
 --
--- Data for Name: _pages_v_blocks_product_grid_products; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_product_grid_products; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_product_grid_products (_order, _parent_id, _locale, id, sku, _uuid) FROM stdin;
@@ -4364,7 +4365,7 @@ COPY public._pages_v_blocks_product_grid_products (_order, _parent_id, _locale, 
 
 
 --
--- Data for Name: _pages_v_blocks_spacer; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_spacer; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_spacer (_order, _parent_id, _path, _locale, id, enabled, padding, _uuid, block_name) FROM stdin;
@@ -4372,7 +4373,7 @@ COPY public._pages_v_blocks_spacer (_order, _parent_id, _path, _locale, id, enab
 
 
 --
--- Data for Name: _pages_v_blocks_text; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_text; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_text (_order, _parent_id, _path, _locale, id, enabled, rich_text, background, _uuid, block_name) FROM stdin;
@@ -4381,7 +4382,7 @@ COPY public._pages_v_blocks_text (_order, _parent_id, _path, _locale, id, enable
 
 
 --
--- Data for Name: _pages_v_blocks_text_cards; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_text_cards; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_text_cards (_order, _parent_id, _path, _locale, id, enabled, content, background, _uuid, block_name) FROM stdin;
@@ -4390,7 +4391,7 @@ COPY public._pages_v_blocks_text_cards (_order, _parent_id, _path, _locale, id, 
 
 
 --
--- Data for Name: _pages_v_blocks_text_cards_cards; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_text_cards_cards; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_text_cards_cards (_order, _parent_id, _locale, id, title, content, _uuid) FROM stdin;
@@ -4400,7 +4401,7 @@ COPY public._pages_v_blocks_text_cards_cards (_order, _parent_id, _locale, id, t
 
 
 --
--- Data for Name: _pages_v_blocks_text_image; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_text_image; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_text_image (_order, _parent_id, _path, _locale, id, enabled, rich_text, reverse, _uuid, block_name, background) FROM stdin;
@@ -4525,7 +4526,7 @@ COPY public._pages_v_blocks_text_image (_order, _parent_id, _path, _locale, id, 
 
 
 --
--- Data for Name: _pages_v_blocks_three_columns; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_three_columns; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_three_columns (_order, _parent_id, _path, _locale, id, enabled, intro, background, _uuid, block_name) FROM stdin;
@@ -4534,7 +4535,7 @@ COPY public._pages_v_blocks_three_columns (_order, _parent_id, _path, _locale, i
 
 
 --
--- Data for Name: _pages_v_blocks_three_columns_cells; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_three_columns_cells; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_three_columns_cells (_order, _parent_id, _locale, id, content, _uuid) FROM stdin;
@@ -4545,7 +4546,7 @@ COPY public._pages_v_blocks_three_columns_cells (_order, _parent_id, _locale, id
 
 
 --
--- Data for Name: _pages_v_blocks_two_columns; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_two_columns; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_two_columns (_order, _parent_id, _path, _locale, id, enabled, intro, background, _uuid, block_name) FROM stdin;
@@ -4554,7 +4555,7 @@ COPY public._pages_v_blocks_two_columns (_order, _parent_id, _path, _locale, id,
 
 
 --
--- Data for Name: _pages_v_blocks_two_columns_cells; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_blocks_two_columns_cells; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_blocks_two_columns_cells (_order, _parent_id, _locale, id, content, _uuid) FROM stdin;
@@ -4564,7 +4565,7 @@ COPY public._pages_v_blocks_two_columns_cells (_order, _parent_id, _locale, id, 
 
 
 --
--- Data for Name: _pages_v_locales; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_locales; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_locales (version_title, version_meta_title, version_meta_image_id, version_meta_description, version_slug, id, _locale, _parent_id, version_location) FROM stdin;
@@ -4672,7 +4673,7 @@ Homepage	Home Sweet Home – Mobilier Design & Campagne Chic | Pièces Uniques p
 
 
 --
--- Data for Name: _pages_v_rels; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: _pages_v_rels; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public._pages_v_rels (id, "order", parent_id, path, locale, media_id, pages_id) FROM stdin;
@@ -5143,7 +5144,7 @@ COPY public._pages_v_rels (id, "order", parent_id, path, locale, media_id, pages
 
 
 --
--- Data for Name: footers; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: footers; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.footers (id, updated_at, created_at) FROM stdin;
@@ -5152,7 +5153,7 @@ COPY public.footers (id, updated_at, created_at) FROM stdin;
 
 
 --
--- Data for Name: footers_columns; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: footers_columns; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.footers_columns (_order, _parent_id, id, title, content, _locale) FROM stdin;
@@ -5160,7 +5161,7 @@ COPY public.footers_columns (_order, _parent_id, id, title, content, _locale) FR
 
 
 --
--- Data for Name: footers_locales; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: footers_locales; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.footers_locales (tenant_id, id, _locale, _parent_id, baseline) FROM stdin;
@@ -5170,7 +5171,7 @@ COPY public.footers_locales (tenant_id, id, _locale, _parent_id, baseline) FROM 
 
 
 --
--- Data for Name: headers; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: headers; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.headers (id, updated_at, created_at) FROM stdin;
@@ -5179,7 +5180,7 @@ COPY public.headers (id, updated_at, created_at) FROM stdin;
 
 
 --
--- Data for Name: headers_locales; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: headers_locales; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.headers_locales (tenant_id, intro, id, _locale, _parent_id) FROM stdin;
@@ -5189,7 +5190,7 @@ COPY public.headers_locales (tenant_id, intro, id, _locale, _parent_id) FROM std
 
 
 --
--- Data for Name: headers_navigation; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: headers_navigation; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.headers_navigation (_order, _parent_id, id, link_type, link_new_tab, link_url, link_label) FROM stdin;
@@ -5198,7 +5199,7 @@ COPY public.headers_navigation (_order, _parent_id, id, link_type, link_new_tab,
 
 
 --
--- Data for Name: headers_navigation_link_navigation_child; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: headers_navigation_link_navigation_child; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.headers_navigation_link_navigation_child (_order, _parent_id, id, link_type, link_new_tab, link_url, link_label) FROM stdin;
@@ -5206,7 +5207,7 @@ COPY public.headers_navigation_link_navigation_child (_order, _parent_id, id, li
 
 
 --
--- Data for Name: headers_rels; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: headers_rels; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.headers_rels (id, "order", parent_id, path, pages_id) FROM stdin;
@@ -5214,7 +5215,7 @@ COPY public.headers_rels (id, "order", parent_id, path, pages_id) FROM stdin;
 
 
 --
--- Data for Name: media; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: media; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.media (id, alt, caption, updated_at, created_at, url, thumbnail_u_r_l, filename, mime_type, filesize, width, height, focal_x, focal_y, sizes_thumbnail_url, sizes_thumbnail_width, sizes_thumbnail_height, sizes_thumbnail_mime_type, sizes_thumbnail_filesize, sizes_thumbnail_filename, sizes_square_url, sizes_square_width, sizes_square_height, sizes_square_mime_type, sizes_square_filesize, sizes_square_filename, sizes_small_url, sizes_small_width, sizes_small_height, sizes_small_mime_type, sizes_small_filesize, sizes_small_filename, sizes_medium_url, sizes_medium_width, sizes_medium_height, sizes_medium_mime_type, sizes_medium_filesize, sizes_medium_filename, sizes_large_url, sizes_large_width, sizes_large_height, sizes_large_mime_type, sizes_large_filesize, sizes_large_filename, sizes_xlarge_url, sizes_xlarge_width, sizes_xlarge_height, sizes_xlarge_mime_type, sizes_xlarge_filesize, sizes_xlarge_filename, sizes_og_url, sizes_og_width, sizes_og_height, sizes_og_mime_type, sizes_og_filesize, sizes_og_filename) FROM stdin;
@@ -5231,7 +5232,7 @@ COPY public.media (id, alt, caption, updated_at, created_at, url, thumbnail_u_r_
 
 
 --
--- Data for Name: media_rels; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: media_rels; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.media_rels (id, "order", parent_id, path, media_tag_id) FROM stdin;
@@ -5239,7 +5240,7 @@ COPY public.media_rels (id, "order", parent_id, path, media_tag_id) FROM stdin;
 
 
 --
--- Data for Name: media_tag; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: media_tag; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.media_tag (id, label, updated_at, created_at) FROM stdin;
@@ -5247,7 +5248,7 @@ COPY public.media_tag (id, label, updated_at, created_at) FROM stdin;
 
 
 --
--- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages (id, tenant_id, parent_id, published_at, updated_at, created_at, _status) FROM stdin;
@@ -5256,7 +5257,7 @@ COPY public.pages (id, tenant_id, parent_id, published_at, updated_at, created_a
 
 
 --
--- Data for Name: pages_blocks_banner; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_banner; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_banner (_order, _parent_id, _path, _locale, id, enabled, background, content, background_image_id, block_name) FROM stdin;
@@ -5264,7 +5265,7 @@ COPY public.pages_blocks_banner (_order, _parent_id, _path, _locale, id, enabled
 
 
 --
--- Data for Name: pages_blocks_benefits; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_benefits; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_benefits (_order, _parent_id, _path, _locale, id, block_name) FROM stdin;
@@ -5274,7 +5275,7 @@ COPY public.pages_blocks_benefits (_order, _parent_id, _path, _locale, id, block
 
 
 --
--- Data for Name: pages_blocks_benefits_benefits; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_benefits_benefits; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_benefits_benefits (_order, _parent_id, _locale, id, enabled, title, subtitle, icon_id) FROM stdin;
@@ -5288,7 +5289,7 @@ COPY public.pages_blocks_benefits_benefits (_order, _parent_id, _locale, id, ena
 
 
 --
--- Data for Name: pages_blocks_cards; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_cards; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_cards (_order, _parent_id, _path, _locale, id, enabled, content, background, block_name) FROM stdin;
@@ -5296,7 +5297,7 @@ COPY public.pages_blocks_cards (_order, _parent_id, _path, _locale, id, enabled,
 
 
 --
--- Data for Name: pages_blocks_cards_cards; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_cards_cards; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_cards_cards (_order, _parent_id, _locale, id, image_id, content) FROM stdin;
@@ -5304,7 +5305,7 @@ COPY public.pages_blocks_cards_cards (_order, _parent_id, _locale, id, image_id,
 
 
 --
--- Data for Name: pages_blocks_hero; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_hero; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_hero (_order, _parent_id, _path, _locale, id, enabled, content, background_image_id, background, block_name) FROM stdin;
@@ -5314,7 +5315,7 @@ COPY public.pages_blocks_hero (_order, _parent_id, _path, _locale, id, enabled, 
 
 
 --
--- Data for Name: pages_blocks_image_grid; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_image_grid; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_image_grid (_order, _parent_id, _path, _locale, id, enabled, intro, block_name) FROM stdin;
@@ -5324,7 +5325,7 @@ COPY public.pages_blocks_image_grid (_order, _parent_id, _path, _locale, id, ena
 
 
 --
--- Data for Name: pages_blocks_image_grid_images; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_image_grid_images; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_image_grid_images (_order, _parent_id, _locale, id, image_id, caption, has_link, link_type, link_new_tab, link_url) FROM stdin;
@@ -5340,7 +5341,7 @@ COPY public.pages_blocks_image_grid_images (_order, _parent_id, _locale, id, ima
 
 
 --
--- Data for Name: pages_blocks_product_grid; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_product_grid; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_product_grid (_order, _parent_id, _path, _locale, id, enabled, title, block_name, background) FROM stdin;
@@ -5350,7 +5351,7 @@ COPY public.pages_blocks_product_grid (_order, _parent_id, _path, _locale, id, e
 
 
 --
--- Data for Name: pages_blocks_product_grid_products; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_product_grid_products; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_product_grid_products (_order, _parent_id, _locale, id, sku) FROM stdin;
@@ -5366,7 +5367,7 @@ COPY public.pages_blocks_product_grid_products (_order, _parent_id, _locale, id,
 
 
 --
--- Data for Name: pages_blocks_spacer; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_spacer; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_spacer (_order, _parent_id, _path, _locale, id, enabled, padding, block_name) FROM stdin;
@@ -5374,7 +5375,7 @@ COPY public.pages_blocks_spacer (_order, _parent_id, _path, _locale, id, enabled
 
 
 --
--- Data for Name: pages_blocks_text; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_text; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_text (_order, _parent_id, _path, _locale, id, enabled, rich_text, background, block_name) FROM stdin;
@@ -5382,7 +5383,7 @@ COPY public.pages_blocks_text (_order, _parent_id, _path, _locale, id, enabled, 
 
 
 --
--- Data for Name: pages_blocks_text_cards; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_text_cards; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_text_cards (_order, _parent_id, _path, _locale, id, enabled, content, background, block_name) FROM stdin;
@@ -5390,7 +5391,7 @@ COPY public.pages_blocks_text_cards (_order, _parent_id, _path, _locale, id, ena
 
 
 --
--- Data for Name: pages_blocks_text_cards_cards; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_text_cards_cards; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_text_cards_cards (_order, _parent_id, _locale, id, title, content) FROM stdin;
@@ -5398,7 +5399,7 @@ COPY public.pages_blocks_text_cards_cards (_order, _parent_id, _locale, id, titl
 
 
 --
--- Data for Name: pages_blocks_text_image; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_text_image; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_text_image (_order, _parent_id, _path, _locale, id, enabled, rich_text, reverse, block_name, background) FROM stdin;
@@ -5409,7 +5410,7 @@ COPY public.pages_blocks_text_image (_order, _parent_id, _path, _locale, id, ena
 
 
 --
--- Data for Name: pages_blocks_three_columns; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_three_columns; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_three_columns (_order, _parent_id, _path, _locale, id, enabled, intro, background, block_name) FROM stdin;
@@ -5417,7 +5418,7 @@ COPY public.pages_blocks_three_columns (_order, _parent_id, _path, _locale, id, 
 
 
 --
--- Data for Name: pages_blocks_three_columns_cells; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_three_columns_cells; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_three_columns_cells (_order, _parent_id, _locale, id, content) FROM stdin;
@@ -5425,7 +5426,7 @@ COPY public.pages_blocks_three_columns_cells (_order, _parent_id, _locale, id, c
 
 
 --
--- Data for Name: pages_blocks_two_columns; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_two_columns; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_two_columns (_order, _parent_id, _path, _locale, id, enabled, intro, background, block_name) FROM stdin;
@@ -5433,7 +5434,7 @@ COPY public.pages_blocks_two_columns (_order, _parent_id, _path, _locale, id, en
 
 
 --
--- Data for Name: pages_blocks_two_columns_cells; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_blocks_two_columns_cells; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_blocks_two_columns_cells (_order, _parent_id, _locale, id, content) FROM stdin;
@@ -5441,7 +5442,7 @@ COPY public.pages_blocks_two_columns_cells (_order, _parent_id, _locale, id, con
 
 
 --
--- Data for Name: pages_locales; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_locales; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_locales (title, meta_title, meta_image_id, meta_description, slug, id, _locale, _parent_id, location) FROM stdin;
@@ -5451,7 +5452,7 @@ Homepage	Home Sweet Home – Mobilier Design & Campagne Chic | Pièces Uniques p
 
 
 --
--- Data for Name: pages_rels; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: pages_rels; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.pages_rels (id, "order", parent_id, path, locale, media_id, pages_id) FROM stdin;
@@ -5479,7 +5480,7 @@ COPY public.pages_rels (id, "order", parent_id, path, locale, media_id, pages_id
 
 
 --
--- Data for Name: payload_jobs; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: payload_jobs; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.payload_jobs (id, input, completed_at, total_tried, has_error, error, task_slug, queue, wait_until, processing, updated_at, created_at) FROM stdin;
@@ -5487,7 +5488,7 @@ COPY public.payload_jobs (id, input, completed_at, total_tried, has_error, error
 
 
 --
--- Data for Name: payload_jobs_log; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: payload_jobs_log; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.payload_jobs_log (_order, _parent_id, id, executed_at, completed_at, task_slug, task_i_d, input, output, state, error) FROM stdin;
@@ -5495,40 +5496,35 @@ COPY public.payload_jobs_log (_order, _parent_id, id, executed_at, completed_at,
 
 
 --
--- Data for Name: payload_locked_documents; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: payload_locked_documents; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.payload_locked_documents (id, global_slug, updated_at, created_at) FROM stdin;
-28	\N	2025-09-13 11:09:59.079+00	2025-09-13 11:09:59.08+00
 \.
 
 
 --
--- Data for Name: payload_locked_documents_rels; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: payload_locked_documents_rels; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.payload_locked_documents_rels (id, "order", parent_id, path, users_id, tenants_id, headers_id, pages_id, footers_id, media_id, media_tag_id, search_id, payload_jobs_id) FROM stdin;
-55	\N	28	document	\N	1	\N	\N	\N	\N	\N	\N	\N
-56	\N	28	user	2	\N	\N	\N	\N	\N	\N	\N	\N
 \.
 
 
 --
--- Data for Name: payload_migrations; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: payload_migrations; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.payload_migrations (id, name, batch, updated_at, created_at) FROM stdin;
-1	dev	-1	2025-09-13 11:44:49.924+00	2025-09-10 15:30:45.101+00
 \.
 
 
 --
--- Data for Name: payload_preferences; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: payload_preferences; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM stdin;
 1	nav	{"open": true}	2025-09-10 15:45:08.018+00	2025-09-10 15:45:06.599+00
-15	locale	"en"	2025-09-13 11:55:08.575+00	2025-09-11 17:50:14.603+00
 14	collection-pages-1	{"fields": {"block": {"collapsed": ["68c2fd1764e276ea2e8fa57c", "68c2fd5b64e276ea2e8fa57e"]}, "block.3._index-0": {"tabIndex": 0}, "links.0.link._index-0": {"tabIndex": 1}}}	2025-09-13 11:55:19.938+00	2025-09-11 17:33:54.941+00
 16	collection-footers	{"editViewType": "default"}	2025-09-11 17:53:07.37+00	2025-09-11 17:53:03.591+00
 4	collection-tenants	{"limit": 10, "editViewType": "default"}	2025-09-10 15:51:56.238+00	2025-09-10 15:50:32.011+00
@@ -5538,7 +5534,6 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 8	collection-tenants-1	{"fields": {"_index-0": {"tabIndex": 0}}}	2025-09-11 14:47:39.785+00	2025-09-10 19:30:28.95+00
 7	collection-media	{"editViewType": "default"}	2025-09-10 16:49:54.637+00	2025-09-10 16:49:35.621+00
 18	collection-tenants	{"editViewType": "default"}	2025-09-13 10:10:43.96+00	2025-09-13 10:10:42.389+00
-19	collection-tenants-1	{"fields": {"_index-0": {"tabIndex": 3}}}	2025-09-13 10:10:47.755+00	2025-09-13 10:10:45.775+00
 3	collection-pages	{"limit": 10, "editViewType": "default"}	2025-09-11 16:46:26.049+00	2025-09-10 15:50:20.195+00
 13	collection-pages	{"editViewType": "live-preview"}	2025-09-13 11:29:56.763+00	2025-09-11 17:23:40.278+00
 11	collection-headers-2	{"fields": {"navigation": {"collapsed": []}}}	2025-09-11 16:55:42.933+00	2025-09-11 16:55:37.747+00
@@ -5546,27 +5541,33 @@ COPY public.payload_preferences (id, key, value, updated_at, created_at) FROM st
 10	collection-pages-1	{"fields": {"block": {"collapsed": ["68c2ea6d059f2564770e4476", "68c2fd1764e276ea2e8fa57c", "68c2fd5b64e276ea2e8fa57e", "68c2ff91d70c809b5fa580b7", "68c30133d70c809b5fa580bb"]}, "content": {"hello": "hi", "collapsed": ["68c2ea8ea8fff17bfdc13837"]}, "_index-2": {"tabIndex": 0}, "block.3.images": {"collapsed": []}, "block.4.images": {"collapsed": ["68c1e3f3cacf410cb456fbc0", "68c1e4f6cacf410cb456fbc2", "68c1e504cacf410cb456fbc4", "68c1e809cacf410cb456fbc9"]}, "block.1.benefits": {"collapsed": ["68c2fd1a19788e7937833ac0"]}, "block.2._index-0": {"tabIndex": 0}, "block.2.products": {"collapsed": ["68c1e2f9cacf410cb456fbb6", "68c1e307cacf410cb456fbb8"]}, "links.0.link._index-0": {"tabIndex": 0}}}	2025-09-11 17:21:38.898+00	2025-09-10 19:36:26.562+00
 2	collection-users	{"limit": 10, "editViewType": "default"}	2025-09-11 17:22:43.051+00	2025-09-10 15:45:10.377+00
 12	collection-users	{"limit": 10}	2025-09-11 17:23:36.62+00	2025-09-11 17:23:31.248+00
+19	collection-tenants-1	{"fields": {"_index-0": {"tabIndex": 0}}}	2025-09-15 17:12:41.476+00	2025-09-13 10:10:45.775+00
+20	collection-media	{}	2025-09-15 17:14:08.539+00	2025-09-15 17:14:08.54+00
+21	nav	{"groups": {"Settings": {"open": true}, "Collections": {"open": false}}}	2025-09-15 17:16:07.386+00	2025-09-15 17:14:09.842+00
+15	locale	"en"	2025-09-15 17:18:30.977+00	2025-09-11 17:50:14.603+00
 \.
 
 
 --
--- Data for Name: payload_preferences_rels; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: payload_preferences_rels; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.payload_preferences_rels (id, "order", parent_id, path, users_id) FROM stdin;
 182	\N	18	user	2
-185	\N	19	user	2
 147	\N	12	user	2
 204	\N	13	user	2
 157	\N	16	user	2
 162	\N	17	user	2
-214	\N	15	user	2
 215	\N	14	user	2
+222	\N	19	user	2
+225	\N	20	user	2
+230	\N	21	user	2
+232	\N	15	user	2
 \.
 
 
 --
--- Data for Name: search; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: search; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.search (id, priority, slug, meta_title, meta_description, meta_image_id, updated_at, created_at) FROM stdin;
@@ -5575,7 +5576,7 @@ COPY public.search (id, priority, slug, meta_title, meta_description, meta_image
 
 
 --
--- Data for Name: search_categories; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: search_categories; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.search_categories (_order, _parent_id, id, relation_to, title) FROM stdin;
@@ -5583,7 +5584,7 @@ COPY public.search_categories (_order, _parent_id, id, relation_to, title) FROM 
 
 
 --
--- Data for Name: search_locales; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: search_locales; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.search_locales (title, id, _locale, _parent_id) FROM stdin;
@@ -5593,7 +5594,7 @@ Homepage	146	fr	1
 
 
 --
--- Data for Name: search_rels; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: search_rels; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.search_rels (id, "order", parent_id, path, pages_id) FROM stdin;
@@ -5602,359 +5603,359 @@ COPY public.search_rels (id, "order", parent_id, path, pages_id) FROM stdin;
 
 
 --
--- Data for Name: tenants; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: tenants; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.tenants (id, name, slug, redirects, has_cache_invalidation, url_cache_invalidation, updated_at, created_at) FROM stdin;
-1	Demo webshop	demo	\N	t	https://localhost:3000/api/invalidate	2025-09-11 15:29:21.366+00	2025-09-10 15:52:23.94+00
+1	Demo webshop	demo	\N	t	https://localhost:3000/api/invalidate	2025-09-15 17:12:57.647+00	2025-09-10 15:52:23.94+00
 \.
 
 
 --
--- Data for Name: tenants_locales; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: tenants_locales; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.tenants_locales (meta_title, meta_image_id, meta_description, settings, id, _locale, _parent_id, domain) FROM stdin;
-\N	\N	\N	\N	9	en	1	http://localhost:3000
-\N	\N	\N	\N	10	fr	1	http://localhost:3000/fr
+d	\N	\N	\N	15	en	1	http://nuxt.localhost:9080
+\N	\N	\N	\N	16	fr	1	http://nuxt.localhost:9080/fr
 \.
 
 
 --
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.users (id, updated_at, created_at, email, reset_password_token, reset_password_expiration, salt, hash, login_attempts, lock_until) FROM stdin;
-2	2025-09-13 11:44:50.204+00	2025-09-11 17:23:08.822+00	admin@akretion.com	\N	\N	795d547ee259e944c83f1b826d03f7d0aa277f2a652362b7aa0b667a19eb9250	ca1fa41658aeda0a20963a5af554bb126821debbd08979bf0293a2ae72988b538d013c1d192a390b3e1689bab6be76feb24758ad86fd22143575da2e4320a1be60d1054a76fa99a115a1d5dd2592a038818d49878ce2a29ba48fe68dcda185ce7e875b64d43f149f5a40ac28e009e5f31f55623f64fa4df553d74702ed7165a94a518b921410158400e7791e22e85561449db3bdb1c8cc22e67aaef830062c2a3203c1180a6aaf16ea2a8d2399b5e16872d0d7126dd8b422062cf0d5a0c2b2a45c24c710b8cea36b021c7952a0269488365701722da99c61ee55ff510096e019b0685a07cb0394d216024a3a9c56a674bcc9c0f9f6106e20626555d5a7b2f5e015f5ea066e14c965fea227bcbd09051058ab0096978ccfae85b37a9a9680ceb593f511bb16977a3d67c63cd06a24906f326e34479a794beefbe8278b86d3d5b15eb895967c8b650711dbc05b54604b290fd0fc5d19ad5f1b23bda52437797fb12cdc953750ac30b7e73e5b7376e283a36a4c4ea846484668a3bbe0af2c3f7d6e6cb301c103f755e257378add96f37e9bc07c9ea7fdffc6a5c196b98c2d77349eca117e2fc7623960419f73cccdbdcabfedaa3c9bf79fd63b6e1e343819969f807e14bffe530ef57d92ea26e99f8d7ac184e0869e2d30fad9bf793eac9bbeaf0a458f1656912a58b18cebc8c7415e4075dd9280294bf26ab463e8dec53b14785e	0	\N
+2	2025-09-15 17:12:17.481+00	2025-09-11 17:23:08.822+00	admin@akretion.com	\N	\N	795d547ee259e944c83f1b826d03f7d0aa277f2a652362b7aa0b667a19eb9250	ca1fa41658aeda0a20963a5af554bb126821debbd08979bf0293a2ae72988b538d013c1d192a390b3e1689bab6be76feb24758ad86fd22143575da2e4320a1be60d1054a76fa99a115a1d5dd2592a038818d49878ce2a29ba48fe68dcda185ce7e875b64d43f149f5a40ac28e009e5f31f55623f64fa4df553d74702ed7165a94a518b921410158400e7791e22e85561449db3bdb1c8cc22e67aaef830062c2a3203c1180a6aaf16ea2a8d2399b5e16872d0d7126dd8b422062cf0d5a0c2b2a45c24c710b8cea36b021c7952a0269488365701722da99c61ee55ff510096e019b0685a07cb0394d216024a3a9c56a674bcc9c0f9f6106e20626555d5a7b2f5e015f5ea066e14c965fea227bcbd09051058ab0096978ccfae85b37a9a9680ceb593f511bb16977a3d67c63cd06a24906f326e34479a794beefbe8278b86d3d5b15eb895967c8b650711dbc05b54604b290fd0fc5d19ad5f1b23bda52437797fb12cdc953750ac30b7e73e5b7376e283a36a4c4ea846484668a3bbe0af2c3f7d6e6cb301c103f755e257378add96f37e9bc07c9ea7fdffc6a5c196b98c2d77349eca117e2fc7623960419f73cccdbdcabfedaa3c9bf79fd63b6e1e343819969f807e14bffe530ef57d92ea26e99f8d7ac184e0869e2d30fad9bf793eac9bbeaf0a458f1656912a58b18cebc8c7415e4075dd9280294bf26ab463e8dec53b14785e	0	\N
 \.
 
 
 --
--- Data for Name: users_sessions; Type: TABLE DATA; Schema: public; Owner: strapi
+-- Data for Name: users_sessions; Type: TABLE DATA; Schema: public; Owner: odoo
 --
 
 COPY public.users_sessions (_order, _parent_id, id, created_at, expires_at) FROM stdin;
-1	2	9c040356-7e7d-4d48-94ee-e1ad23546e9a	2025-09-13 11:44:50.202+00	2025-09-13 13:44:50.202+00
+1	2	1a774192-adba-4d26-9d38-b6218bc7d9d0	2025-09-15 17:12:17.478+00	2025-09-15 19:12:17.478+00
 \.
 
 
 --
--- Name: _pages_v_blocks_banner_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_banner_id_seq', 2, true);
 
 
 --
--- Name: _pages_v_blocks_benefits_benefits_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_benefits_benefits_id_seq', 366, true);
 
 
 --
--- Name: _pages_v_blocks_benefits_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_benefits_id_seq', 122, true);
 
 
 --
--- Name: _pages_v_blocks_cards_cards_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_cards_cards_id_seq', 17, true);
 
 
 --
--- Name: _pages_v_blocks_cards_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_cards_id_seq', 11, true);
 
 
 --
--- Name: _pages_v_blocks_hero_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_hero_id_seq', 141, true);
 
 
 --
--- Name: _pages_v_blocks_image_grid_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_image_grid_id_seq', 113, true);
 
 
 --
--- Name: _pages_v_blocks_image_grid_images_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_image_grid_images_id_seq', 442, true);
 
 
 --
--- Name: _pages_v_blocks_product_grid_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_product_grid_id_seq', 110, true);
 
 
 --
--- Name: _pages_v_blocks_product_grid_products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_product_grid_products_id_seq', 393, true);
 
 
 --
--- Name: _pages_v_blocks_spacer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_spacer_id_seq', 1, false);
 
 
 --
--- Name: _pages_v_blocks_text_cards_cards_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_cards_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_text_cards_cards_id_seq', 2, true);
 
 
 --
--- Name: _pages_v_blocks_text_cards_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_text_cards_id_seq', 1, true);
 
 
 --
--- Name: _pages_v_blocks_text_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_text_id_seq', 2, true);
 
 
 --
--- Name: _pages_v_blocks_text_image_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_text_image_id_seq', 159, true);
 
 
 --
--- Name: _pages_v_blocks_three_columns_cells_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_cells_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_three_columns_cells_id_seq', 3, true);
 
 
 --
--- Name: _pages_v_blocks_three_columns_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_three_columns_id_seq', 1, true);
 
 
 --
--- Name: _pages_v_blocks_two_columns_cells_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_cells_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_two_columns_cells_id_seq', 2, true);
 
 
 --
--- Name: _pages_v_blocks_two_columns_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_blocks_two_columns_id_seq', 4, true);
 
 
 --
--- Name: _pages_v_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_id_seq', 106, true);
 
 
 --
--- Name: _pages_v_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_locales_id_seq', 156, true);
 
 
 --
--- Name: _pages_v_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: _pages_v_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public._pages_v_rels_id_seq', 607, true);
 
 
 --
--- Name: footers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: footers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.footers_id_seq', 3, true);
 
 
 --
--- Name: footers_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: footers_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.footers_locales_id_seq', 5, true);
 
 
 --
--- Name: headers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: headers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.headers_id_seq', 2, true);
 
 
 --
--- Name: headers_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: headers_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.headers_locales_id_seq', 11, true);
 
 
 --
--- Name: headers_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: headers_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.headers_rels_id_seq', 5, true);
 
 
 --
--- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: media_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.media_id_seq', 10, true);
 
 
 --
--- Name: media_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: media_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.media_rels_id_seq', 1, false);
 
 
 --
--- Name: media_tag_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: media_tag_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.media_tag_id_seq', 1, false);
 
 
 --
--- Name: pages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: pages_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.pages_id_seq', 3, true);
 
 
 --
--- Name: pages_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: pages_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.pages_locales_id_seq', 150, true);
 
 
 --
--- Name: pages_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: pages_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.pages_rels_id_seq', 576, true);
 
 
 --
--- Name: payload_jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: payload_jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.payload_jobs_id_seq', 1, false);
 
 
 --
--- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
-SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 28, true);
-
-
---
--- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
---
-
-SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 56, true);
+SELECT pg_catalog.setval('public.payload_locked_documents_id_seq', 31, true);
 
 
 --
--- Name: payload_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
+--
+
+SELECT pg_catalog.setval('public.payload_locked_documents_rels_id_seq', 62, true);
+
+
+--
+-- Name: payload_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.payload_migrations_id_seq', 1, true);
 
 
 --
--- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: payload_preferences_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
-SELECT pg_catalog.setval('public.payload_preferences_id_seq', 19, true);
-
-
---
--- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
---
-
-SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 215, true);
+SELECT pg_catalog.setval('public.payload_preferences_id_seq', 21, true);
 
 
 --
--- Name: search_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
+--
+
+SELECT pg_catalog.setval('public.payload_preferences_rels_id_seq', 232, true);
+
+
+--
+-- Name: search_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.search_id_seq', 3, true);
 
 
 --
--- Name: search_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: search_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.search_locales_id_seq', 146, true);
 
 
 --
--- Name: search_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: search_rels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.search_rels_id_seq', 98, true);
 
 
 --
--- Name: tenants_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: tenants_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.tenants_id_seq', 1, true);
 
 
 --
--- Name: tenants_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: tenants_locales_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
-SELECT pg_catalog.setval('public.tenants_locales_id_seq', 10, true);
+SELECT pg_catalog.setval('public.tenants_locales_id_seq', 16, true);
 
 
 --
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: strapi
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: odoo
 --
 
 SELECT pg_catalog.setval('public.users_id_seq', 2, true);
 
 
 --
--- Name: _pages_v_blocks_banner _pages_v_blocks_banner_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner _pages_v_blocks_banner_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_banner
@@ -5962,7 +5963,7 @@ ALTER TABLE ONLY public._pages_v_blocks_banner
 
 
 --
--- Name: _pages_v_blocks_benefits_benefits _pages_v_blocks_benefits_benefits_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits _pages_v_blocks_benefits_benefits_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_benefits_benefits
@@ -5970,7 +5971,7 @@ ALTER TABLE ONLY public._pages_v_blocks_benefits_benefits
 
 
 --
--- Name: _pages_v_blocks_benefits _pages_v_blocks_benefits_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits _pages_v_blocks_benefits_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_benefits
@@ -5978,7 +5979,7 @@ ALTER TABLE ONLY public._pages_v_blocks_benefits
 
 
 --
--- Name: _pages_v_blocks_cards_cards _pages_v_blocks_cards_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards _pages_v_blocks_cards_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_cards_cards
@@ -5986,7 +5987,7 @@ ALTER TABLE ONLY public._pages_v_blocks_cards_cards
 
 
 --
--- Name: _pages_v_blocks_cards _pages_v_blocks_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards _pages_v_blocks_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_cards
@@ -5994,7 +5995,7 @@ ALTER TABLE ONLY public._pages_v_blocks_cards
 
 
 --
--- Name: _pages_v_blocks_hero _pages_v_blocks_hero_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero _pages_v_blocks_hero_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_hero
@@ -6002,7 +6003,7 @@ ALTER TABLE ONLY public._pages_v_blocks_hero
 
 
 --
--- Name: _pages_v_blocks_image_grid_images _pages_v_blocks_image_grid_images_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images _pages_v_blocks_image_grid_images_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_image_grid_images
@@ -6010,7 +6011,7 @@ ALTER TABLE ONLY public._pages_v_blocks_image_grid_images
 
 
 --
--- Name: _pages_v_blocks_image_grid _pages_v_blocks_image_grid_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid _pages_v_blocks_image_grid_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_image_grid
@@ -6018,7 +6019,7 @@ ALTER TABLE ONLY public._pages_v_blocks_image_grid
 
 
 --
--- Name: _pages_v_blocks_product_grid _pages_v_blocks_product_grid_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid _pages_v_blocks_product_grid_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_product_grid
@@ -6026,7 +6027,7 @@ ALTER TABLE ONLY public._pages_v_blocks_product_grid
 
 
 --
--- Name: _pages_v_blocks_product_grid_products _pages_v_blocks_product_grid_products_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_products _pages_v_blocks_product_grid_products_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_product_grid_products
@@ -6034,7 +6035,7 @@ ALTER TABLE ONLY public._pages_v_blocks_product_grid_products
 
 
 --
--- Name: _pages_v_blocks_spacer _pages_v_blocks_spacer_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer _pages_v_blocks_spacer_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_spacer
@@ -6042,7 +6043,7 @@ ALTER TABLE ONLY public._pages_v_blocks_spacer
 
 
 --
--- Name: _pages_v_blocks_text_cards_cards _pages_v_blocks_text_cards_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_cards _pages_v_blocks_text_cards_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text_cards_cards
@@ -6050,7 +6051,7 @@ ALTER TABLE ONLY public._pages_v_blocks_text_cards_cards
 
 
 --
--- Name: _pages_v_blocks_text_cards _pages_v_blocks_text_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards _pages_v_blocks_text_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text_cards
@@ -6058,7 +6059,7 @@ ALTER TABLE ONLY public._pages_v_blocks_text_cards
 
 
 --
--- Name: _pages_v_blocks_text_image _pages_v_blocks_text_image_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image _pages_v_blocks_text_image_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text_image
@@ -6066,7 +6067,7 @@ ALTER TABLE ONLY public._pages_v_blocks_text_image
 
 
 --
--- Name: _pages_v_blocks_text _pages_v_blocks_text_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text _pages_v_blocks_text_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text
@@ -6074,7 +6075,7 @@ ALTER TABLE ONLY public._pages_v_blocks_text
 
 
 --
--- Name: _pages_v_blocks_three_columns_cells _pages_v_blocks_three_columns_cells_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_cells _pages_v_blocks_three_columns_cells_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_three_columns_cells
@@ -6082,7 +6083,7 @@ ALTER TABLE ONLY public._pages_v_blocks_three_columns_cells
 
 
 --
--- Name: _pages_v_blocks_three_columns _pages_v_blocks_three_columns_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns _pages_v_blocks_three_columns_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_three_columns
@@ -6090,7 +6091,7 @@ ALTER TABLE ONLY public._pages_v_blocks_three_columns
 
 
 --
--- Name: _pages_v_blocks_two_columns_cells _pages_v_blocks_two_columns_cells_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_cells _pages_v_blocks_two_columns_cells_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_two_columns_cells
@@ -6098,7 +6099,7 @@ ALTER TABLE ONLY public._pages_v_blocks_two_columns_cells
 
 
 --
--- Name: _pages_v_blocks_two_columns _pages_v_blocks_two_columns_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns _pages_v_blocks_two_columns_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_two_columns
@@ -6106,7 +6107,7 @@ ALTER TABLE ONLY public._pages_v_blocks_two_columns
 
 
 --
--- Name: _pages_v_locales _pages_v_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_locales _pages_v_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_locales
@@ -6114,7 +6115,7 @@ ALTER TABLE ONLY public._pages_v_locales
 
 
 --
--- Name: _pages_v _pages_v_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v _pages_v_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v
@@ -6122,7 +6123,7 @@ ALTER TABLE ONLY public._pages_v
 
 
 --
--- Name: _pages_v_rels _pages_v_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_rels _pages_v_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_rels
@@ -6130,7 +6131,7 @@ ALTER TABLE ONLY public._pages_v_rels
 
 
 --
--- Name: footers_columns footers_columns_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: footers_columns footers_columns_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.footers_columns
@@ -6138,7 +6139,7 @@ ALTER TABLE ONLY public.footers_columns
 
 
 --
--- Name: footers_locales footers_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: footers_locales footers_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.footers_locales
@@ -6146,7 +6147,7 @@ ALTER TABLE ONLY public.footers_locales
 
 
 --
--- Name: footers footers_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: footers footers_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.footers
@@ -6154,7 +6155,7 @@ ALTER TABLE ONLY public.footers
 
 
 --
--- Name: headers_locales headers_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers_locales headers_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_locales
@@ -6162,7 +6163,7 @@ ALTER TABLE ONLY public.headers_locales
 
 
 --
--- Name: headers_navigation_link_navigation_child headers_navigation_link_navigation_child_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers_navigation_link_navigation_child headers_navigation_link_navigation_child_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_navigation_link_navigation_child
@@ -6170,7 +6171,7 @@ ALTER TABLE ONLY public.headers_navigation_link_navigation_child
 
 
 --
--- Name: headers_navigation headers_navigation_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers_navigation headers_navigation_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_navigation
@@ -6178,7 +6179,7 @@ ALTER TABLE ONLY public.headers_navigation
 
 
 --
--- Name: headers headers_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers headers_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers
@@ -6186,7 +6187,7 @@ ALTER TABLE ONLY public.headers
 
 
 --
--- Name: headers_rels headers_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers_rels headers_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_rels
@@ -6194,7 +6195,7 @@ ALTER TABLE ONLY public.headers_rels
 
 
 --
--- Name: media media_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: media media_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.media
@@ -6202,7 +6203,7 @@ ALTER TABLE ONLY public.media
 
 
 --
--- Name: media_rels media_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: media_rels media_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.media_rels
@@ -6210,7 +6211,7 @@ ALTER TABLE ONLY public.media_rels
 
 
 --
--- Name: media_tag media_tag_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: media_tag media_tag_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.media_tag
@@ -6218,7 +6219,7 @@ ALTER TABLE ONLY public.media_tag
 
 
 --
--- Name: pages_blocks_banner pages_blocks_banner_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_banner pages_blocks_banner_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_banner
@@ -6226,7 +6227,7 @@ ALTER TABLE ONLY public.pages_blocks_banner
 
 
 --
--- Name: pages_blocks_benefits_benefits pages_blocks_benefits_benefits_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_benefits pages_blocks_benefits_benefits_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_benefits_benefits
@@ -6234,7 +6235,7 @@ ALTER TABLE ONLY public.pages_blocks_benefits_benefits
 
 
 --
--- Name: pages_blocks_benefits pages_blocks_benefits_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits pages_blocks_benefits_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_benefits
@@ -6242,7 +6243,7 @@ ALTER TABLE ONLY public.pages_blocks_benefits
 
 
 --
--- Name: pages_blocks_cards_cards pages_blocks_cards_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_cards pages_blocks_cards_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_cards_cards
@@ -6250,7 +6251,7 @@ ALTER TABLE ONLY public.pages_blocks_cards_cards
 
 
 --
--- Name: pages_blocks_cards pages_blocks_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards pages_blocks_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_cards
@@ -6258,7 +6259,7 @@ ALTER TABLE ONLY public.pages_blocks_cards
 
 
 --
--- Name: pages_blocks_hero pages_blocks_hero_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_hero pages_blocks_hero_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_hero
@@ -6266,7 +6267,7 @@ ALTER TABLE ONLY public.pages_blocks_hero
 
 
 --
--- Name: pages_blocks_image_grid_images pages_blocks_image_grid_images_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_images pages_blocks_image_grid_images_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_image_grid_images
@@ -6274,7 +6275,7 @@ ALTER TABLE ONLY public.pages_blocks_image_grid_images
 
 
 --
--- Name: pages_blocks_image_grid pages_blocks_image_grid_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid pages_blocks_image_grid_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_image_grid
@@ -6282,7 +6283,7 @@ ALTER TABLE ONLY public.pages_blocks_image_grid
 
 
 --
--- Name: pages_blocks_product_grid pages_blocks_product_grid_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid pages_blocks_product_grid_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_product_grid
@@ -6290,7 +6291,7 @@ ALTER TABLE ONLY public.pages_blocks_product_grid
 
 
 --
--- Name: pages_blocks_product_grid_products pages_blocks_product_grid_products_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid_products pages_blocks_product_grid_products_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_product_grid_products
@@ -6298,7 +6299,7 @@ ALTER TABLE ONLY public.pages_blocks_product_grid_products
 
 
 --
--- Name: pages_blocks_spacer pages_blocks_spacer_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_spacer pages_blocks_spacer_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_spacer
@@ -6306,7 +6307,7 @@ ALTER TABLE ONLY public.pages_blocks_spacer
 
 
 --
--- Name: pages_blocks_text_cards_cards pages_blocks_text_cards_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards_cards pages_blocks_text_cards_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_text_cards_cards
@@ -6314,7 +6315,7 @@ ALTER TABLE ONLY public.pages_blocks_text_cards_cards
 
 
 --
--- Name: pages_blocks_text_cards pages_blocks_text_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards pages_blocks_text_cards_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_text_cards
@@ -6322,7 +6323,7 @@ ALTER TABLE ONLY public.pages_blocks_text_cards
 
 
 --
--- Name: pages_blocks_text_image pages_blocks_text_image_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_image pages_blocks_text_image_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_text_image
@@ -6330,7 +6331,7 @@ ALTER TABLE ONLY public.pages_blocks_text_image
 
 
 --
--- Name: pages_blocks_text pages_blocks_text_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_text pages_blocks_text_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_text
@@ -6338,7 +6339,7 @@ ALTER TABLE ONLY public.pages_blocks_text
 
 
 --
--- Name: pages_blocks_three_columns_cells pages_blocks_three_columns_cells_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns_cells pages_blocks_three_columns_cells_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_three_columns_cells
@@ -6346,7 +6347,7 @@ ALTER TABLE ONLY public.pages_blocks_three_columns_cells
 
 
 --
--- Name: pages_blocks_three_columns pages_blocks_three_columns_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns pages_blocks_three_columns_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_three_columns
@@ -6354,7 +6355,7 @@ ALTER TABLE ONLY public.pages_blocks_three_columns
 
 
 --
--- Name: pages_blocks_two_columns_cells pages_blocks_two_columns_cells_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns_cells pages_blocks_two_columns_cells_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_two_columns_cells
@@ -6362,7 +6363,7 @@ ALTER TABLE ONLY public.pages_blocks_two_columns_cells
 
 
 --
--- Name: pages_blocks_two_columns pages_blocks_two_columns_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns pages_blocks_two_columns_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_two_columns
@@ -6370,7 +6371,7 @@ ALTER TABLE ONLY public.pages_blocks_two_columns
 
 
 --
--- Name: pages_locales pages_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_locales pages_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_locales
@@ -6378,7 +6379,7 @@ ALTER TABLE ONLY public.pages_locales
 
 
 --
--- Name: pages pages_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages pages_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages
@@ -6386,7 +6387,7 @@ ALTER TABLE ONLY public.pages
 
 
 --
--- Name: pages_rels pages_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_rels pages_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_rels
@@ -6394,7 +6395,7 @@ ALTER TABLE ONLY public.pages_rels
 
 
 --
--- Name: payload_jobs_log payload_jobs_log_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_jobs_log payload_jobs_log_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_jobs_log
@@ -6402,7 +6403,7 @@ ALTER TABLE ONLY public.payload_jobs_log
 
 
 --
--- Name: payload_jobs payload_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_jobs payload_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_jobs
@@ -6410,7 +6411,7 @@ ALTER TABLE ONLY public.payload_jobs
 
 
 --
--- Name: payload_locked_documents payload_locked_documents_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents payload_locked_documents_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents
@@ -6418,7 +6419,7 @@ ALTER TABLE ONLY public.payload_locked_documents
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -6426,7 +6427,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_migrations payload_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_migrations payload_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_migrations
@@ -6434,7 +6435,7 @@ ALTER TABLE ONLY public.payload_migrations
 
 
 --
--- Name: payload_preferences payload_preferences_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_preferences payload_preferences_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_preferences
@@ -6442,7 +6443,7 @@ ALTER TABLE ONLY public.payload_preferences
 
 
 --
--- Name: payload_preferences_rels payload_preferences_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels payload_preferences_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_preferences_rels
@@ -6450,7 +6451,7 @@ ALTER TABLE ONLY public.payload_preferences_rels
 
 
 --
--- Name: search_categories search_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: search_categories search_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search_categories
@@ -6458,7 +6459,7 @@ ALTER TABLE ONLY public.search_categories
 
 
 --
--- Name: search_locales search_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: search_locales search_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search_locales
@@ -6466,7 +6467,7 @@ ALTER TABLE ONLY public.search_locales
 
 
 --
--- Name: search search_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: search search_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search
@@ -6474,7 +6475,7 @@ ALTER TABLE ONLY public.search
 
 
 --
--- Name: search_rels search_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: search_rels search_rels_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search_rels
@@ -6482,7 +6483,7 @@ ALTER TABLE ONLY public.search_rels
 
 
 --
--- Name: tenants_locales tenants_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: tenants_locales tenants_locales_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.tenants_locales
@@ -6490,7 +6491,7 @@ ALTER TABLE ONLY public.tenants_locales
 
 
 --
--- Name: tenants tenants_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: tenants tenants_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.tenants
@@ -6498,7 +6499,7 @@ ALTER TABLE ONLY public.tenants
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.users
@@ -6506,7 +6507,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users_sessions users_sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: strapi
+-- Name: users_sessions users_sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.users_sessions
@@ -6514,1932 +6515,1932 @@ ALTER TABLE ONLY public.users_sessions
 
 
 --
--- Name: _pages_v_blocks_banner_background_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner_background_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_banner_background_image_idx ON public._pages_v_blocks_banner USING btree (background_image_id);
 
 
 --
--- Name: _pages_v_blocks_banner_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_banner_locale_idx ON public._pages_v_blocks_banner USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_banner_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_banner_order_idx ON public._pages_v_blocks_banner USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_banner_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_banner_parent_id_idx ON public._pages_v_blocks_banner USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_banner_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_banner_path_idx ON public._pages_v_blocks_banner USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_benefits_benefits_icon_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits_icon_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_benefits_benefits_icon_idx ON public._pages_v_blocks_benefits_benefits USING btree (icon_id);
 
 
 --
--- Name: _pages_v_blocks_benefits_benefits_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_benefits_benefits_locale_idx ON public._pages_v_blocks_benefits_benefits USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_benefits_benefits_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_benefits_benefits_order_idx ON public._pages_v_blocks_benefits_benefits USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_benefits_benefits_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_benefits_benefits_parent_id_idx ON public._pages_v_blocks_benefits_benefits USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_benefits_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_benefits_locale_idx ON public._pages_v_blocks_benefits USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_benefits_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_benefits_order_idx ON public._pages_v_blocks_benefits USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_benefits_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_benefits_parent_id_idx ON public._pages_v_blocks_benefits USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_benefits_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_benefits_path_idx ON public._pages_v_blocks_benefits USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_cards_cards_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_cards_cards_image_idx ON public._pages_v_blocks_cards_cards USING btree (image_id);
 
 
 --
--- Name: _pages_v_blocks_cards_cards_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_cards_cards_locale_idx ON public._pages_v_blocks_cards_cards USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_cards_cards_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_cards_cards_order_idx ON public._pages_v_blocks_cards_cards USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_cards_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_cards_cards_parent_id_idx ON public._pages_v_blocks_cards_cards USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_cards_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_cards_locale_idx ON public._pages_v_blocks_cards USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_cards_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_cards_order_idx ON public._pages_v_blocks_cards USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_cards_parent_id_idx ON public._pages_v_blocks_cards USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_cards_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_cards_path_idx ON public._pages_v_blocks_cards USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_hero_background_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero_background_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_hero_background_image_idx ON public._pages_v_blocks_hero USING btree (background_image_id);
 
 
 --
--- Name: _pages_v_blocks_hero_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_hero_locale_idx ON public._pages_v_blocks_hero USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_hero_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_hero_order_idx ON public._pages_v_blocks_hero USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_hero_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_hero_parent_id_idx ON public._pages_v_blocks_hero USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_hero_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_hero_path_idx ON public._pages_v_blocks_hero USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_image_grid_images_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_image_grid_images_image_idx ON public._pages_v_blocks_image_grid_images USING btree (image_id);
 
 
 --
--- Name: _pages_v_blocks_image_grid_images_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_image_grid_images_locale_idx ON public._pages_v_blocks_image_grid_images USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_image_grid_images_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_image_grid_images_order_idx ON public._pages_v_blocks_image_grid_images USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_image_grid_images_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_image_grid_images_parent_id_idx ON public._pages_v_blocks_image_grid_images USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_image_grid_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_image_grid_locale_idx ON public._pages_v_blocks_image_grid USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_image_grid_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_image_grid_order_idx ON public._pages_v_blocks_image_grid USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_image_grid_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_image_grid_parent_id_idx ON public._pages_v_blocks_image_grid USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_image_grid_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_image_grid_path_idx ON public._pages_v_blocks_image_grid USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_product_grid_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_product_grid_locale_idx ON public._pages_v_blocks_product_grid USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_product_grid_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_product_grid_order_idx ON public._pages_v_blocks_product_grid USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_product_grid_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_product_grid_parent_id_idx ON public._pages_v_blocks_product_grid USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_product_grid_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_product_grid_path_idx ON public._pages_v_blocks_product_grid USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_product_grid_products_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_products_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_product_grid_products_locale_idx ON public._pages_v_blocks_product_grid_products USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_product_grid_products_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_products_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_product_grid_products_order_idx ON public._pages_v_blocks_product_grid_products USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_product_grid_products_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_products_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_product_grid_products_parent_id_idx ON public._pages_v_blocks_product_grid_products USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_spacer_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_spacer_locale_idx ON public._pages_v_blocks_spacer USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_spacer_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_spacer_order_idx ON public._pages_v_blocks_spacer USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_spacer_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_spacer_parent_id_idx ON public._pages_v_blocks_spacer USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_spacer_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_spacer_path_idx ON public._pages_v_blocks_spacer USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_text_cards_cards_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_cards_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_cards_cards_locale_idx ON public._pages_v_blocks_text_cards_cards USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_text_cards_cards_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_cards_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_cards_cards_order_idx ON public._pages_v_blocks_text_cards_cards USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_text_cards_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_cards_cards_parent_id_idx ON public._pages_v_blocks_text_cards_cards USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_text_cards_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_cards_locale_idx ON public._pages_v_blocks_text_cards USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_text_cards_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_cards_order_idx ON public._pages_v_blocks_text_cards USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_text_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_cards_parent_id_idx ON public._pages_v_blocks_text_cards USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_text_cards_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_cards_path_idx ON public._pages_v_blocks_text_cards USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_text_image_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_image_locale_idx ON public._pages_v_blocks_text_image USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_text_image_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_image_order_idx ON public._pages_v_blocks_text_image USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_text_image_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_image_parent_id_idx ON public._pages_v_blocks_text_image USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_text_image_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_image_path_idx ON public._pages_v_blocks_text_image USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_text_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_locale_idx ON public._pages_v_blocks_text USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_text_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_order_idx ON public._pages_v_blocks_text USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_text_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_parent_id_idx ON public._pages_v_blocks_text USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_text_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_text_path_idx ON public._pages_v_blocks_text USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_three_columns_cells_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_cells_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_three_columns_cells_locale_idx ON public._pages_v_blocks_three_columns_cells USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_three_columns_cells_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_cells_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_three_columns_cells_order_idx ON public._pages_v_blocks_three_columns_cells USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_three_columns_cells_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_cells_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_three_columns_cells_parent_id_idx ON public._pages_v_blocks_three_columns_cells USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_three_columns_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_three_columns_locale_idx ON public._pages_v_blocks_three_columns USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_three_columns_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_three_columns_order_idx ON public._pages_v_blocks_three_columns USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_three_columns_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_three_columns_parent_id_idx ON public._pages_v_blocks_three_columns USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_three_columns_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_three_columns_path_idx ON public._pages_v_blocks_three_columns USING btree (_path);
 
 
 --
--- Name: _pages_v_blocks_two_columns_cells_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_cells_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_two_columns_cells_locale_idx ON public._pages_v_blocks_two_columns_cells USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_two_columns_cells_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_cells_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_two_columns_cells_order_idx ON public._pages_v_blocks_two_columns_cells USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_two_columns_cells_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_cells_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_two_columns_cells_parent_id_idx ON public._pages_v_blocks_two_columns_cells USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_two_columns_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_two_columns_locale_idx ON public._pages_v_blocks_two_columns USING btree (_locale);
 
 
 --
--- Name: _pages_v_blocks_two_columns_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_two_columns_order_idx ON public._pages_v_blocks_two_columns USING btree (_order);
 
 
 --
--- Name: _pages_v_blocks_two_columns_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_two_columns_parent_id_idx ON public._pages_v_blocks_two_columns USING btree (_parent_id);
 
 
 --
--- Name: _pages_v_blocks_two_columns_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_blocks_two_columns_path_idx ON public._pages_v_blocks_two_columns USING btree (_path);
 
 
 --
--- Name: _pages_v_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_created_at_idx ON public._pages_v USING btree (created_at);
 
 
 --
--- Name: _pages_v_latest_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_latest_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_latest_idx ON public._pages_v USING btree (latest);
 
 
 --
--- Name: _pages_v_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE UNIQUE INDEX _pages_v_locales_locale_parent_id_unique ON public._pages_v_locales USING btree (_locale, _parent_id);
 
 
 --
--- Name: _pages_v_parent_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_parent_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_parent_idx ON public._pages_v USING btree (parent_id);
 
 
 --
--- Name: _pages_v_published_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_published_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_published_locale_idx ON public._pages_v USING btree (published_locale);
 
 
 --
--- Name: _pages_v_rels_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_rels_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_rels_locale_idx ON public._pages_v_rels USING btree (locale);
 
 
 --
--- Name: _pages_v_rels_media_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_rels_media_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_rels_media_id_idx ON public._pages_v_rels USING btree (media_id, locale);
 
 
 --
--- Name: _pages_v_rels_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_rels_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_rels_order_idx ON public._pages_v_rels USING btree ("order");
 
 
 --
--- Name: _pages_v_rels_pages_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_rels_pages_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_rels_pages_id_idx ON public._pages_v_rels USING btree (pages_id, locale);
 
 
 --
--- Name: _pages_v_rels_parent_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_rels_parent_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_rels_parent_idx ON public._pages_v_rels USING btree (parent_id);
 
 
 --
--- Name: _pages_v_rels_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_rels_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_rels_path_idx ON public._pages_v_rels USING btree (path);
 
 
 --
--- Name: _pages_v_snapshot_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_snapshot_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_snapshot_idx ON public._pages_v USING btree (snapshot);
 
 
 --
--- Name: _pages_v_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_updated_at_idx ON public._pages_v USING btree (updated_at);
 
 
 --
--- Name: _pages_v_version_meta_version_meta_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_version_meta_version_meta_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_version_meta_version_meta_image_idx ON public._pages_v_locales USING btree (version_meta_image_id, _locale);
 
 
 --
--- Name: _pages_v_version_version__status_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_version_version__status_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_version_version__status_idx ON public._pages_v USING btree (version__status);
 
 
 --
--- Name: _pages_v_version_version_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_version_version_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_version_version_created_at_idx ON public._pages_v USING btree (version_created_at);
 
 
 --
--- Name: _pages_v_version_version_location_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_version_version_location_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_version_version_location_idx ON public._pages_v_locales USING btree (version_location, _locale);
 
 
 --
--- Name: _pages_v_version_version_parent_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_version_version_parent_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_version_version_parent_idx ON public._pages_v USING btree (version_parent_id);
 
 
 --
--- Name: _pages_v_version_version_slug_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_version_version_slug_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_version_version_slug_idx ON public._pages_v_locales USING btree (version_slug, _locale);
 
 
 --
--- Name: _pages_v_version_version_tenant_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_version_version_tenant_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_version_version_tenant_idx ON public._pages_v USING btree (version_tenant_id);
 
 
 --
--- Name: _pages_v_version_version_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: _pages_v_version_version_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX _pages_v_version_version_updated_at_idx ON public._pages_v USING btree (version_updated_at);
 
 
 --
--- Name: footers_columns_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: footers_columns_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX footers_columns_locale_idx ON public.footers_columns USING btree (_locale);
 
 
 --
--- Name: footers_columns_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: footers_columns_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX footers_columns_order_idx ON public.footers_columns USING btree (_order);
 
 
 --
--- Name: footers_columns_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: footers_columns_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX footers_columns_parent_id_idx ON public.footers_columns USING btree (_parent_id);
 
 
 --
--- Name: footers_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: footers_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX footers_created_at_idx ON public.footers USING btree (created_at);
 
 
 --
--- Name: footers_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: strapi
+-- Name: footers_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE UNIQUE INDEX footers_locales_locale_parent_id_unique ON public.footers_locales USING btree (_locale, _parent_id);
 
 
 --
--- Name: footers_tenant_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: footers_tenant_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX footers_tenant_idx ON public.footers_locales USING btree (tenant_id, _locale);
 
 
 --
--- Name: footers_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: footers_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX footers_updated_at_idx ON public.footers USING btree (updated_at);
 
 
 --
--- Name: headers_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_created_at_idx ON public.headers USING btree (created_at);
 
 
 --
--- Name: headers_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE UNIQUE INDEX headers_locales_locale_parent_id_unique ON public.headers_locales USING btree (_locale, _parent_id);
 
 
 --
--- Name: headers_navigation_link_navigation_child_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_navigation_link_navigation_child_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_navigation_link_navigation_child_order_idx ON public.headers_navigation_link_navigation_child USING btree (_order);
 
 
 --
--- Name: headers_navigation_link_navigation_child_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_navigation_link_navigation_child_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_navigation_link_navigation_child_parent_id_idx ON public.headers_navigation_link_navigation_child USING btree (_parent_id);
 
 
 --
--- Name: headers_navigation_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_navigation_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_navigation_order_idx ON public.headers_navigation USING btree (_order);
 
 
 --
--- Name: headers_navigation_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_navigation_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_navigation_parent_id_idx ON public.headers_navigation USING btree (_parent_id);
 
 
 --
--- Name: headers_rels_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_rels_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_rels_order_idx ON public.headers_rels USING btree ("order");
 
 
 --
--- Name: headers_rels_pages_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_rels_pages_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_rels_pages_id_idx ON public.headers_rels USING btree (pages_id);
 
 
 --
--- Name: headers_rels_parent_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_rels_parent_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_rels_parent_idx ON public.headers_rels USING btree (parent_id);
 
 
 --
--- Name: headers_rels_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_rels_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_rels_path_idx ON public.headers_rels USING btree (path);
 
 
 --
--- Name: headers_tenant_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_tenant_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_tenant_idx ON public.headers_locales USING btree (tenant_id, _locale);
 
 
 --
--- Name: headers_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: headers_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX headers_updated_at_idx ON public.headers USING btree (updated_at);
 
 
 --
--- Name: media_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_created_at_idx ON public.media USING btree (created_at);
 
 
 --
--- Name: media_filename_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_filename_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE UNIQUE INDEX media_filename_idx ON public.media USING btree (filename);
 
 
 --
--- Name: media_rels_media_tag_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_rels_media_tag_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_rels_media_tag_id_idx ON public.media_rels USING btree (media_tag_id);
 
 
 --
--- Name: media_rels_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_rels_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_rels_order_idx ON public.media_rels USING btree ("order");
 
 
 --
--- Name: media_rels_parent_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_rels_parent_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_rels_parent_idx ON public.media_rels USING btree (parent_id);
 
 
 --
--- Name: media_rels_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_rels_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_rels_path_idx ON public.media_rels USING btree (path);
 
 
 --
--- Name: media_sizes_large_sizes_large_filename_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_sizes_large_sizes_large_filename_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_sizes_large_sizes_large_filename_idx ON public.media USING btree (sizes_large_filename);
 
 
 --
--- Name: media_sizes_medium_sizes_medium_filename_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_sizes_medium_sizes_medium_filename_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_sizes_medium_sizes_medium_filename_idx ON public.media USING btree (sizes_medium_filename);
 
 
 --
--- Name: media_sizes_og_sizes_og_filename_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_sizes_og_sizes_og_filename_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_sizes_og_sizes_og_filename_idx ON public.media USING btree (sizes_og_filename);
 
 
 --
--- Name: media_sizes_small_sizes_small_filename_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_sizes_small_sizes_small_filename_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_sizes_small_sizes_small_filename_idx ON public.media USING btree (sizes_small_filename);
 
 
 --
--- Name: media_sizes_square_sizes_square_filename_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_sizes_square_sizes_square_filename_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_sizes_square_sizes_square_filename_idx ON public.media USING btree (sizes_square_filename);
 
 
 --
--- Name: media_sizes_thumbnail_sizes_thumbnail_filename_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_sizes_thumbnail_sizes_thumbnail_filename_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_sizes_thumbnail_sizes_thumbnail_filename_idx ON public.media USING btree (sizes_thumbnail_filename);
 
 
 --
--- Name: media_sizes_xlarge_sizes_xlarge_filename_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_sizes_xlarge_sizes_xlarge_filename_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_sizes_xlarge_sizes_xlarge_filename_idx ON public.media USING btree (sizes_xlarge_filename);
 
 
 --
--- Name: media_tag_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_tag_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_tag_created_at_idx ON public.media_tag USING btree (created_at);
 
 
 --
--- Name: media_tag_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_tag_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_tag_updated_at_idx ON public.media_tag USING btree (updated_at);
 
 
 --
--- Name: media_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: media_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX media_updated_at_idx ON public.media USING btree (updated_at);
 
 
 --
--- Name: pages__status_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages__status_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages__status_idx ON public.pages USING btree (_status);
 
 
 --
--- Name: pages_blocks_banner_background_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_banner_background_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_banner_background_image_idx ON public.pages_blocks_banner USING btree (background_image_id);
 
 
 --
--- Name: pages_blocks_banner_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_banner_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_banner_locale_idx ON public.pages_blocks_banner USING btree (_locale);
 
 
 --
--- Name: pages_blocks_banner_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_banner_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_banner_order_idx ON public.pages_blocks_banner USING btree (_order);
 
 
 --
--- Name: pages_blocks_banner_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_banner_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_banner_parent_id_idx ON public.pages_blocks_banner USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_banner_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_banner_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_banner_path_idx ON public.pages_blocks_banner USING btree (_path);
 
 
 --
--- Name: pages_blocks_benefits_benefits_icon_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_benefits_icon_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_benefits_benefits_icon_idx ON public.pages_blocks_benefits_benefits USING btree (icon_id);
 
 
 --
--- Name: pages_blocks_benefits_benefits_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_benefits_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_benefits_benefits_locale_idx ON public.pages_blocks_benefits_benefits USING btree (_locale);
 
 
 --
--- Name: pages_blocks_benefits_benefits_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_benefits_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_benefits_benefits_order_idx ON public.pages_blocks_benefits_benefits USING btree (_order);
 
 
 --
--- Name: pages_blocks_benefits_benefits_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_benefits_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_benefits_benefits_parent_id_idx ON public.pages_blocks_benefits_benefits USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_benefits_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_benefits_locale_idx ON public.pages_blocks_benefits USING btree (_locale);
 
 
 --
--- Name: pages_blocks_benefits_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_benefits_order_idx ON public.pages_blocks_benefits USING btree (_order);
 
 
 --
--- Name: pages_blocks_benefits_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_benefits_parent_id_idx ON public.pages_blocks_benefits USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_benefits_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_benefits_path_idx ON public.pages_blocks_benefits USING btree (_path);
 
 
 --
--- Name: pages_blocks_cards_cards_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_cards_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_cards_cards_image_idx ON public.pages_blocks_cards_cards USING btree (image_id);
 
 
 --
--- Name: pages_blocks_cards_cards_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_cards_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_cards_cards_locale_idx ON public.pages_blocks_cards_cards USING btree (_locale);
 
 
 --
--- Name: pages_blocks_cards_cards_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_cards_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_cards_cards_order_idx ON public.pages_blocks_cards_cards USING btree (_order);
 
 
 --
--- Name: pages_blocks_cards_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_cards_cards_parent_id_idx ON public.pages_blocks_cards_cards USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_cards_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_cards_locale_idx ON public.pages_blocks_cards USING btree (_locale);
 
 
 --
--- Name: pages_blocks_cards_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_cards_order_idx ON public.pages_blocks_cards USING btree (_order);
 
 
 --
--- Name: pages_blocks_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_cards_parent_id_idx ON public.pages_blocks_cards USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_cards_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_cards_path_idx ON public.pages_blocks_cards USING btree (_path);
 
 
 --
--- Name: pages_blocks_hero_background_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_hero_background_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_hero_background_image_idx ON public.pages_blocks_hero USING btree (background_image_id);
 
 
 --
--- Name: pages_blocks_hero_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_hero_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_hero_locale_idx ON public.pages_blocks_hero USING btree (_locale);
 
 
 --
--- Name: pages_blocks_hero_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_hero_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_hero_order_idx ON public.pages_blocks_hero USING btree (_order);
 
 
 --
--- Name: pages_blocks_hero_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_hero_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_hero_parent_id_idx ON public.pages_blocks_hero USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_hero_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_hero_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_hero_path_idx ON public.pages_blocks_hero USING btree (_path);
 
 
 --
--- Name: pages_blocks_image_grid_images_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_images_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_image_grid_images_image_idx ON public.pages_blocks_image_grid_images USING btree (image_id);
 
 
 --
--- Name: pages_blocks_image_grid_images_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_images_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_image_grid_images_locale_idx ON public.pages_blocks_image_grid_images USING btree (_locale);
 
 
 --
--- Name: pages_blocks_image_grid_images_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_images_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_image_grid_images_order_idx ON public.pages_blocks_image_grid_images USING btree (_order);
 
 
 --
--- Name: pages_blocks_image_grid_images_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_images_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_image_grid_images_parent_id_idx ON public.pages_blocks_image_grid_images USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_image_grid_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_image_grid_locale_idx ON public.pages_blocks_image_grid USING btree (_locale);
 
 
 --
--- Name: pages_blocks_image_grid_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_image_grid_order_idx ON public.pages_blocks_image_grid USING btree (_order);
 
 
 --
--- Name: pages_blocks_image_grid_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_image_grid_parent_id_idx ON public.pages_blocks_image_grid USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_image_grid_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_image_grid_path_idx ON public.pages_blocks_image_grid USING btree (_path);
 
 
 --
--- Name: pages_blocks_product_grid_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_product_grid_locale_idx ON public.pages_blocks_product_grid USING btree (_locale);
 
 
 --
--- Name: pages_blocks_product_grid_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_product_grid_order_idx ON public.pages_blocks_product_grid USING btree (_order);
 
 
 --
--- Name: pages_blocks_product_grid_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_product_grid_parent_id_idx ON public.pages_blocks_product_grid USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_product_grid_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_product_grid_path_idx ON public.pages_blocks_product_grid USING btree (_path);
 
 
 --
--- Name: pages_blocks_product_grid_products_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid_products_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_product_grid_products_locale_idx ON public.pages_blocks_product_grid_products USING btree (_locale);
 
 
 --
--- Name: pages_blocks_product_grid_products_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid_products_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_product_grid_products_order_idx ON public.pages_blocks_product_grid_products USING btree (_order);
 
 
 --
--- Name: pages_blocks_product_grid_products_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid_products_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_product_grid_products_parent_id_idx ON public.pages_blocks_product_grid_products USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_spacer_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_spacer_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_spacer_locale_idx ON public.pages_blocks_spacer USING btree (_locale);
 
 
 --
--- Name: pages_blocks_spacer_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_spacer_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_spacer_order_idx ON public.pages_blocks_spacer USING btree (_order);
 
 
 --
--- Name: pages_blocks_spacer_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_spacer_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_spacer_parent_id_idx ON public.pages_blocks_spacer USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_spacer_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_spacer_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_spacer_path_idx ON public.pages_blocks_spacer USING btree (_path);
 
 
 --
--- Name: pages_blocks_text_cards_cards_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards_cards_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_cards_cards_locale_idx ON public.pages_blocks_text_cards_cards USING btree (_locale);
 
 
 --
--- Name: pages_blocks_text_cards_cards_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards_cards_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_cards_cards_order_idx ON public.pages_blocks_text_cards_cards USING btree (_order);
 
 
 --
--- Name: pages_blocks_text_cards_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_cards_cards_parent_id_idx ON public.pages_blocks_text_cards_cards USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_text_cards_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_cards_locale_idx ON public.pages_blocks_text_cards USING btree (_locale);
 
 
 --
--- Name: pages_blocks_text_cards_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_cards_order_idx ON public.pages_blocks_text_cards USING btree (_order);
 
 
 --
--- Name: pages_blocks_text_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_cards_parent_id_idx ON public.pages_blocks_text_cards USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_text_cards_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_cards_path_idx ON public.pages_blocks_text_cards USING btree (_path);
 
 
 --
--- Name: pages_blocks_text_image_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_image_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_image_locale_idx ON public.pages_blocks_text_image USING btree (_locale);
 
 
 --
--- Name: pages_blocks_text_image_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_image_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_image_order_idx ON public.pages_blocks_text_image USING btree (_order);
 
 
 --
--- Name: pages_blocks_text_image_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_image_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_image_parent_id_idx ON public.pages_blocks_text_image USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_text_image_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_image_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_image_path_idx ON public.pages_blocks_text_image USING btree (_path);
 
 
 --
--- Name: pages_blocks_text_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_locale_idx ON public.pages_blocks_text USING btree (_locale);
 
 
 --
--- Name: pages_blocks_text_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_order_idx ON public.pages_blocks_text USING btree (_order);
 
 
 --
--- Name: pages_blocks_text_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_parent_id_idx ON public.pages_blocks_text USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_text_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_text_path_idx ON public.pages_blocks_text USING btree (_path);
 
 
 --
--- Name: pages_blocks_three_columns_cells_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns_cells_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_three_columns_cells_locale_idx ON public.pages_blocks_three_columns_cells USING btree (_locale);
 
 
 --
--- Name: pages_blocks_three_columns_cells_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns_cells_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_three_columns_cells_order_idx ON public.pages_blocks_three_columns_cells USING btree (_order);
 
 
 --
--- Name: pages_blocks_three_columns_cells_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns_cells_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_three_columns_cells_parent_id_idx ON public.pages_blocks_three_columns_cells USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_three_columns_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_three_columns_locale_idx ON public.pages_blocks_three_columns USING btree (_locale);
 
 
 --
--- Name: pages_blocks_three_columns_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_three_columns_order_idx ON public.pages_blocks_three_columns USING btree (_order);
 
 
 --
--- Name: pages_blocks_three_columns_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_three_columns_parent_id_idx ON public.pages_blocks_three_columns USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_three_columns_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_three_columns_path_idx ON public.pages_blocks_three_columns USING btree (_path);
 
 
 --
--- Name: pages_blocks_two_columns_cells_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns_cells_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_two_columns_cells_locale_idx ON public.pages_blocks_two_columns_cells USING btree (_locale);
 
 
 --
--- Name: pages_blocks_two_columns_cells_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns_cells_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_two_columns_cells_order_idx ON public.pages_blocks_two_columns_cells USING btree (_order);
 
 
 --
--- Name: pages_blocks_two_columns_cells_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns_cells_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_two_columns_cells_parent_id_idx ON public.pages_blocks_two_columns_cells USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_two_columns_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_two_columns_locale_idx ON public.pages_blocks_two_columns USING btree (_locale);
 
 
 --
--- Name: pages_blocks_two_columns_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_two_columns_order_idx ON public.pages_blocks_two_columns USING btree (_order);
 
 
 --
--- Name: pages_blocks_two_columns_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_two_columns_parent_id_idx ON public.pages_blocks_two_columns USING btree (_parent_id);
 
 
 --
--- Name: pages_blocks_two_columns_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_blocks_two_columns_path_idx ON public.pages_blocks_two_columns USING btree (_path);
 
 
 --
--- Name: pages_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_created_at_idx ON public.pages USING btree (created_at);
 
 
 --
--- Name: pages_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE UNIQUE INDEX pages_locales_locale_parent_id_unique ON public.pages_locales USING btree (_locale, _parent_id);
 
 
 --
--- Name: pages_location_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_location_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_location_idx ON public.pages_locales USING btree (location, _locale);
 
 
 --
--- Name: pages_meta_meta_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_meta_meta_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_meta_meta_image_idx ON public.pages_locales USING btree (meta_image_id, _locale);
 
 
 --
--- Name: pages_parent_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_parent_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_parent_idx ON public.pages USING btree (parent_id);
 
 
 --
--- Name: pages_rels_locale_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_rels_locale_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_rels_locale_idx ON public.pages_rels USING btree (locale);
 
 
 --
--- Name: pages_rels_media_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_rels_media_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_rels_media_id_idx ON public.pages_rels USING btree (media_id, locale);
 
 
 --
--- Name: pages_rels_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_rels_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_rels_order_idx ON public.pages_rels USING btree ("order");
 
 
 --
--- Name: pages_rels_pages_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_rels_pages_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_rels_pages_id_idx ON public.pages_rels USING btree (pages_id, locale);
 
 
 --
--- Name: pages_rels_parent_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_rels_parent_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_rels_parent_idx ON public.pages_rels USING btree (parent_id);
 
 
 --
--- Name: pages_rels_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_rels_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_rels_path_idx ON public.pages_rels USING btree (path);
 
 
 --
--- Name: pages_slug_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_slug_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_slug_idx ON public.pages_locales USING btree (slug, _locale);
 
 
 --
--- Name: pages_tenant_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_tenant_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_tenant_idx ON public.pages USING btree (tenant_id);
 
 
 --
--- Name: pages_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: pages_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX pages_updated_at_idx ON public.pages USING btree (updated_at);
 
 
 --
--- Name: payload_jobs_completed_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_completed_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_completed_at_idx ON public.payload_jobs USING btree (completed_at);
 
 
 --
--- Name: payload_jobs_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_created_at_idx ON public.payload_jobs USING btree (created_at);
 
 
 --
--- Name: payload_jobs_has_error_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_has_error_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_has_error_idx ON public.payload_jobs USING btree (has_error);
 
 
 --
--- Name: payload_jobs_log_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_log_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_log_order_idx ON public.payload_jobs_log USING btree (_order);
 
 
 --
--- Name: payload_jobs_log_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_log_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_log_parent_id_idx ON public.payload_jobs_log USING btree (_parent_id);
 
 
 --
--- Name: payload_jobs_processing_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_processing_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_processing_idx ON public.payload_jobs USING btree (processing);
 
 
 --
--- Name: payload_jobs_queue_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_queue_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_queue_idx ON public.payload_jobs USING btree (queue);
 
 
 --
--- Name: payload_jobs_task_slug_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_task_slug_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_task_slug_idx ON public.payload_jobs USING btree (task_slug);
 
 
 --
--- Name: payload_jobs_total_tried_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_total_tried_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_total_tried_idx ON public.payload_jobs USING btree (total_tried);
 
 
 --
--- Name: payload_jobs_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_updated_at_idx ON public.payload_jobs USING btree (updated_at);
 
 
 --
--- Name: payload_jobs_wait_until_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_jobs_wait_until_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_jobs_wait_until_idx ON public.payload_jobs USING btree (wait_until);
 
 
 --
--- Name: payload_locked_documents_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_created_at_idx ON public.payload_locked_documents USING btree (created_at);
 
 
 --
--- Name: payload_locked_documents_global_slug_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_global_slug_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_global_slug_idx ON public.payload_locked_documents USING btree (global_slug);
 
 
 --
--- Name: payload_locked_documents_rels_footers_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_footers_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_footers_id_idx ON public.payload_locked_documents_rels USING btree (footers_id);
 
 
 --
--- Name: payload_locked_documents_rels_headers_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_headers_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_headers_id_idx ON public.payload_locked_documents_rels USING btree (headers_id);
 
 
 --
--- Name: payload_locked_documents_rels_media_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_media_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_media_id_idx ON public.payload_locked_documents_rels USING btree (media_id);
 
 
 --
--- Name: payload_locked_documents_rels_media_tag_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_media_tag_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_media_tag_id_idx ON public.payload_locked_documents_rels USING btree (media_tag_id);
 
 
 --
--- Name: payload_locked_documents_rels_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_order_idx ON public.payload_locked_documents_rels USING btree ("order");
 
 
 --
--- Name: payload_locked_documents_rels_pages_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_pages_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_pages_id_idx ON public.payload_locked_documents_rels USING btree (pages_id);
 
 
 --
--- Name: payload_locked_documents_rels_parent_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_parent_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_parent_idx ON public.payload_locked_documents_rels USING btree (parent_id);
 
 
 --
--- Name: payload_locked_documents_rels_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_path_idx ON public.payload_locked_documents_rels USING btree (path);
 
 
 --
--- Name: payload_locked_documents_rels_payload_jobs_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_payload_jobs_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_payload_jobs_id_idx ON public.payload_locked_documents_rels USING btree (payload_jobs_id);
 
 
 --
--- Name: payload_locked_documents_rels_search_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_search_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_search_id_idx ON public.payload_locked_documents_rels USING btree (search_id);
 
 
 --
--- Name: payload_locked_documents_rels_tenants_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_tenants_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_tenants_id_idx ON public.payload_locked_documents_rels USING btree (tenants_id);
 
 
 --
--- Name: payload_locked_documents_rels_users_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels_users_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_rels_users_id_idx ON public.payload_locked_documents_rels USING btree (users_id);
 
 
 --
--- Name: payload_locked_documents_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_locked_documents_updated_at_idx ON public.payload_locked_documents USING btree (updated_at);
 
 
 --
--- Name: payload_migrations_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_migrations_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_migrations_created_at_idx ON public.payload_migrations USING btree (created_at);
 
 
 --
--- Name: payload_migrations_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_migrations_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_migrations_updated_at_idx ON public.payload_migrations USING btree (updated_at);
 
 
 --
--- Name: payload_preferences_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_preferences_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_preferences_created_at_idx ON public.payload_preferences USING btree (created_at);
 
 
 --
--- Name: payload_preferences_key_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_preferences_key_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_preferences_key_idx ON public.payload_preferences USING btree (key);
 
 
 --
--- Name: payload_preferences_rels_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_preferences_rels_order_idx ON public.payload_preferences_rels USING btree ("order");
 
 
 --
--- Name: payload_preferences_rels_parent_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels_parent_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_preferences_rels_parent_idx ON public.payload_preferences_rels USING btree (parent_id);
 
 
 --
--- Name: payload_preferences_rels_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_preferences_rels_path_idx ON public.payload_preferences_rels USING btree (path);
 
 
 --
--- Name: payload_preferences_rels_users_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels_users_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_preferences_rels_users_id_idx ON public.payload_preferences_rels USING btree (users_id);
 
 
 --
--- Name: payload_preferences_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: payload_preferences_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX payload_preferences_updated_at_idx ON public.payload_preferences USING btree (updated_at);
 
 
 --
--- Name: search_categories_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_categories_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX search_categories_order_idx ON public.search_categories USING btree (_order);
 
 
 --
--- Name: search_categories_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_categories_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX search_categories_parent_id_idx ON public.search_categories USING btree (_parent_id);
 
 
 --
--- Name: search_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX search_created_at_idx ON public.search USING btree (created_at);
 
 
 --
--- Name: search_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE UNIQUE INDEX search_locales_locale_parent_id_unique ON public.search_locales USING btree (_locale, _parent_id);
 
 
 --
--- Name: search_meta_meta_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_meta_meta_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX search_meta_meta_image_idx ON public.search USING btree (meta_image_id);
 
 
 --
--- Name: search_rels_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_rels_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX search_rels_order_idx ON public.search_rels USING btree ("order");
 
 
 --
--- Name: search_rels_pages_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_rels_pages_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX search_rels_pages_id_idx ON public.search_rels USING btree (pages_id);
 
 
 --
--- Name: search_rels_parent_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_rels_parent_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX search_rels_parent_idx ON public.search_rels USING btree (parent_id);
 
 
 --
--- Name: search_rels_path_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_rels_path_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX search_rels_path_idx ON public.search_rels USING btree (path);
 
 
 --
--- Name: search_slug_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_slug_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX search_slug_idx ON public.search USING btree (slug);
 
 
 --
--- Name: search_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: search_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX search_updated_at_idx ON public.search USING btree (updated_at);
 
 
 --
--- Name: tenants_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: tenants_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX tenants_created_at_idx ON public.tenants USING btree (created_at);
 
 
 --
--- Name: tenants_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: strapi
+-- Name: tenants_locales_locale_parent_id_unique; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE UNIQUE INDEX tenants_locales_locale_parent_id_unique ON public.tenants_locales USING btree (_locale, _parent_id);
 
 
 --
--- Name: tenants_meta_meta_image_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: tenants_meta_meta_image_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX tenants_meta_meta_image_idx ON public.tenants_locales USING btree (meta_image_id, _locale);
 
 
 --
--- Name: tenants_slug_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: tenants_slug_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX tenants_slug_idx ON public.tenants USING btree (slug);
 
 
 --
--- Name: tenants_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: tenants_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX tenants_updated_at_idx ON public.tenants USING btree (updated_at);
 
 
 --
--- Name: users_created_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: users_created_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX users_created_at_idx ON public.users USING btree (created_at);
 
 
 --
--- Name: users_email_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: users_email_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE UNIQUE INDEX users_email_idx ON public.users USING btree (email);
 
 
 --
--- Name: users_sessions_order_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: users_sessions_order_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX users_sessions_order_idx ON public.users_sessions USING btree (_order);
 
 
 --
--- Name: users_sessions_parent_id_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: users_sessions_parent_id_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX users_sessions_parent_id_idx ON public.users_sessions USING btree (_parent_id);
 
 
 --
--- Name: users_updated_at_idx; Type: INDEX; Schema: public; Owner: strapi
+-- Name: users_updated_at_idx; Type: INDEX; Schema: public; Owner: odoo
 --
 
 CREATE INDEX users_updated_at_idx ON public.users USING btree (updated_at);
 
 
 --
--- Name: _pages_v_blocks_banner _pages_v_blocks_banner_background_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner _pages_v_blocks_banner_background_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_banner
@@ -8447,7 +8448,7 @@ ALTER TABLE ONLY public._pages_v_blocks_banner
 
 
 --
--- Name: _pages_v_blocks_banner _pages_v_blocks_banner_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_banner _pages_v_blocks_banner_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_banner
@@ -8455,7 +8456,7 @@ ALTER TABLE ONLY public._pages_v_blocks_banner
 
 
 --
--- Name: _pages_v_blocks_benefits_benefits _pages_v_blocks_benefits_benefits_icon_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits _pages_v_blocks_benefits_benefits_icon_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_benefits_benefits
@@ -8463,7 +8464,7 @@ ALTER TABLE ONLY public._pages_v_blocks_benefits_benefits
 
 
 --
--- Name: _pages_v_blocks_benefits_benefits _pages_v_blocks_benefits_benefits_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits_benefits _pages_v_blocks_benefits_benefits_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_benefits_benefits
@@ -8471,7 +8472,7 @@ ALTER TABLE ONLY public._pages_v_blocks_benefits_benefits
 
 
 --
--- Name: _pages_v_blocks_benefits _pages_v_blocks_benefits_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_benefits _pages_v_blocks_benefits_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_benefits
@@ -8479,7 +8480,7 @@ ALTER TABLE ONLY public._pages_v_blocks_benefits
 
 
 --
--- Name: _pages_v_blocks_cards_cards _pages_v_blocks_cards_cards_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards _pages_v_blocks_cards_cards_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_cards_cards
@@ -8487,7 +8488,7 @@ ALTER TABLE ONLY public._pages_v_blocks_cards_cards
 
 
 --
--- Name: _pages_v_blocks_cards_cards _pages_v_blocks_cards_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards_cards _pages_v_blocks_cards_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_cards_cards
@@ -8495,7 +8496,7 @@ ALTER TABLE ONLY public._pages_v_blocks_cards_cards
 
 
 --
--- Name: _pages_v_blocks_cards _pages_v_blocks_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_cards _pages_v_blocks_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_cards
@@ -8503,7 +8504,7 @@ ALTER TABLE ONLY public._pages_v_blocks_cards
 
 
 --
--- Name: _pages_v_blocks_hero _pages_v_blocks_hero_background_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero _pages_v_blocks_hero_background_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_hero
@@ -8511,7 +8512,7 @@ ALTER TABLE ONLY public._pages_v_blocks_hero
 
 
 --
--- Name: _pages_v_blocks_hero _pages_v_blocks_hero_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_hero _pages_v_blocks_hero_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_hero
@@ -8519,7 +8520,7 @@ ALTER TABLE ONLY public._pages_v_blocks_hero
 
 
 --
--- Name: _pages_v_blocks_image_grid_images _pages_v_blocks_image_grid_images_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images _pages_v_blocks_image_grid_images_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_image_grid_images
@@ -8527,7 +8528,7 @@ ALTER TABLE ONLY public._pages_v_blocks_image_grid_images
 
 
 --
--- Name: _pages_v_blocks_image_grid_images _pages_v_blocks_image_grid_images_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid_images _pages_v_blocks_image_grid_images_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_image_grid_images
@@ -8535,7 +8536,7 @@ ALTER TABLE ONLY public._pages_v_blocks_image_grid_images
 
 
 --
--- Name: _pages_v_blocks_image_grid _pages_v_blocks_image_grid_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_image_grid _pages_v_blocks_image_grid_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_image_grid
@@ -8543,7 +8544,7 @@ ALTER TABLE ONLY public._pages_v_blocks_image_grid
 
 
 --
--- Name: _pages_v_blocks_product_grid _pages_v_blocks_product_grid_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid _pages_v_blocks_product_grid_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_product_grid
@@ -8551,7 +8552,7 @@ ALTER TABLE ONLY public._pages_v_blocks_product_grid
 
 
 --
--- Name: _pages_v_blocks_product_grid_products _pages_v_blocks_product_grid_products_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_product_grid_products _pages_v_blocks_product_grid_products_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_product_grid_products
@@ -8559,7 +8560,7 @@ ALTER TABLE ONLY public._pages_v_blocks_product_grid_products
 
 
 --
--- Name: _pages_v_blocks_spacer _pages_v_blocks_spacer_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_spacer _pages_v_blocks_spacer_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_spacer
@@ -8567,7 +8568,7 @@ ALTER TABLE ONLY public._pages_v_blocks_spacer
 
 
 --
--- Name: _pages_v_blocks_text_cards_cards _pages_v_blocks_text_cards_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards_cards _pages_v_blocks_text_cards_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text_cards_cards
@@ -8575,7 +8576,7 @@ ALTER TABLE ONLY public._pages_v_blocks_text_cards_cards
 
 
 --
--- Name: _pages_v_blocks_text_cards _pages_v_blocks_text_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_cards _pages_v_blocks_text_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text_cards
@@ -8583,7 +8584,7 @@ ALTER TABLE ONLY public._pages_v_blocks_text_cards
 
 
 --
--- Name: _pages_v_blocks_text_image _pages_v_blocks_text_image_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text_image _pages_v_blocks_text_image_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text_image
@@ -8591,7 +8592,7 @@ ALTER TABLE ONLY public._pages_v_blocks_text_image
 
 
 --
--- Name: _pages_v_blocks_text _pages_v_blocks_text_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_text _pages_v_blocks_text_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_text
@@ -8599,7 +8600,7 @@ ALTER TABLE ONLY public._pages_v_blocks_text
 
 
 --
--- Name: _pages_v_blocks_three_columns_cells _pages_v_blocks_three_columns_cells_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns_cells _pages_v_blocks_three_columns_cells_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_three_columns_cells
@@ -8607,7 +8608,7 @@ ALTER TABLE ONLY public._pages_v_blocks_three_columns_cells
 
 
 --
--- Name: _pages_v_blocks_three_columns _pages_v_blocks_three_columns_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_three_columns _pages_v_blocks_three_columns_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_three_columns
@@ -8615,7 +8616,7 @@ ALTER TABLE ONLY public._pages_v_blocks_three_columns
 
 
 --
--- Name: _pages_v_blocks_two_columns_cells _pages_v_blocks_two_columns_cells_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns_cells _pages_v_blocks_two_columns_cells_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_two_columns_cells
@@ -8623,7 +8624,7 @@ ALTER TABLE ONLY public._pages_v_blocks_two_columns_cells
 
 
 --
--- Name: _pages_v_blocks_two_columns _pages_v_blocks_two_columns_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_blocks_two_columns _pages_v_blocks_two_columns_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_blocks_two_columns
@@ -8631,7 +8632,7 @@ ALTER TABLE ONLY public._pages_v_blocks_two_columns
 
 
 --
--- Name: _pages_v_locales _pages_v_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_locales _pages_v_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_locales
@@ -8639,7 +8640,7 @@ ALTER TABLE ONLY public._pages_v_locales
 
 
 --
--- Name: _pages_v_locales _pages_v_locales_version_meta_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_locales _pages_v_locales_version_meta_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_locales
@@ -8647,7 +8648,7 @@ ALTER TABLE ONLY public._pages_v_locales
 
 
 --
--- Name: _pages_v _pages_v_parent_id_pages_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v _pages_v_parent_id_pages_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v
@@ -8655,7 +8656,7 @@ ALTER TABLE ONLY public._pages_v
 
 
 --
--- Name: _pages_v_rels _pages_v_rels_media_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_rels _pages_v_rels_media_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_rels
@@ -8663,7 +8664,7 @@ ALTER TABLE ONLY public._pages_v_rels
 
 
 --
--- Name: _pages_v_rels _pages_v_rels_pages_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_rels _pages_v_rels_pages_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_rels
@@ -8671,7 +8672,7 @@ ALTER TABLE ONLY public._pages_v_rels
 
 
 --
--- Name: _pages_v_rels _pages_v_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v_rels _pages_v_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v_rels
@@ -8679,7 +8680,7 @@ ALTER TABLE ONLY public._pages_v_rels
 
 
 --
--- Name: _pages_v _pages_v_version_parent_id_pages_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v _pages_v_version_parent_id_pages_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v
@@ -8687,7 +8688,7 @@ ALTER TABLE ONLY public._pages_v
 
 
 --
--- Name: _pages_v _pages_v_version_tenant_id_tenants_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: _pages_v _pages_v_version_tenant_id_tenants_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public._pages_v
@@ -8695,7 +8696,7 @@ ALTER TABLE ONLY public._pages_v
 
 
 --
--- Name: footers_columns footers_columns_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: footers_columns footers_columns_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.footers_columns
@@ -8703,7 +8704,7 @@ ALTER TABLE ONLY public.footers_columns
 
 
 --
--- Name: footers_locales footers_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: footers_locales footers_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.footers_locales
@@ -8711,7 +8712,7 @@ ALTER TABLE ONLY public.footers_locales
 
 
 --
--- Name: footers_locales footers_locales_tenant_id_tenants_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: footers_locales footers_locales_tenant_id_tenants_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.footers_locales
@@ -8719,7 +8720,7 @@ ALTER TABLE ONLY public.footers_locales
 
 
 --
--- Name: headers_locales headers_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers_locales headers_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_locales
@@ -8727,7 +8728,7 @@ ALTER TABLE ONLY public.headers_locales
 
 
 --
--- Name: headers_locales headers_locales_tenant_id_tenants_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers_locales headers_locales_tenant_id_tenants_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_locales
@@ -8735,7 +8736,7 @@ ALTER TABLE ONLY public.headers_locales
 
 
 --
--- Name: headers_navigation_link_navigation_child headers_navigation_link_navigation_child_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers_navigation_link_navigation_child headers_navigation_link_navigation_child_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_navigation_link_navigation_child
@@ -8743,7 +8744,7 @@ ALTER TABLE ONLY public.headers_navigation_link_navigation_child
 
 
 --
--- Name: headers_navigation headers_navigation_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers_navigation headers_navigation_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_navigation
@@ -8751,7 +8752,7 @@ ALTER TABLE ONLY public.headers_navigation
 
 
 --
--- Name: headers_rels headers_rels_pages_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers_rels headers_rels_pages_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_rels
@@ -8759,7 +8760,7 @@ ALTER TABLE ONLY public.headers_rels
 
 
 --
--- Name: headers_rels headers_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: headers_rels headers_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.headers_rels
@@ -8767,7 +8768,7 @@ ALTER TABLE ONLY public.headers_rels
 
 
 --
--- Name: media_rels media_rels_media_tag_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: media_rels media_rels_media_tag_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.media_rels
@@ -8775,7 +8776,7 @@ ALTER TABLE ONLY public.media_rels
 
 
 --
--- Name: media_rels media_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: media_rels media_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.media_rels
@@ -8783,7 +8784,7 @@ ALTER TABLE ONLY public.media_rels
 
 
 --
--- Name: pages_blocks_banner pages_blocks_banner_background_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_banner pages_blocks_banner_background_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_banner
@@ -8791,7 +8792,7 @@ ALTER TABLE ONLY public.pages_blocks_banner
 
 
 --
--- Name: pages_blocks_banner pages_blocks_banner_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_banner pages_blocks_banner_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_banner
@@ -8799,7 +8800,7 @@ ALTER TABLE ONLY public.pages_blocks_banner
 
 
 --
--- Name: pages_blocks_benefits_benefits pages_blocks_benefits_benefits_icon_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_benefits pages_blocks_benefits_benefits_icon_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_benefits_benefits
@@ -8807,7 +8808,7 @@ ALTER TABLE ONLY public.pages_blocks_benefits_benefits
 
 
 --
--- Name: pages_blocks_benefits_benefits pages_blocks_benefits_benefits_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits_benefits pages_blocks_benefits_benefits_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_benefits_benefits
@@ -8815,7 +8816,7 @@ ALTER TABLE ONLY public.pages_blocks_benefits_benefits
 
 
 --
--- Name: pages_blocks_benefits pages_blocks_benefits_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_benefits pages_blocks_benefits_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_benefits
@@ -8823,7 +8824,7 @@ ALTER TABLE ONLY public.pages_blocks_benefits
 
 
 --
--- Name: pages_blocks_cards_cards pages_blocks_cards_cards_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_cards pages_blocks_cards_cards_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_cards_cards
@@ -8831,7 +8832,7 @@ ALTER TABLE ONLY public.pages_blocks_cards_cards
 
 
 --
--- Name: pages_blocks_cards_cards pages_blocks_cards_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards_cards pages_blocks_cards_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_cards_cards
@@ -8839,7 +8840,7 @@ ALTER TABLE ONLY public.pages_blocks_cards_cards
 
 
 --
--- Name: pages_blocks_cards pages_blocks_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_cards pages_blocks_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_cards
@@ -8847,7 +8848,7 @@ ALTER TABLE ONLY public.pages_blocks_cards
 
 
 --
--- Name: pages_blocks_hero pages_blocks_hero_background_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_hero pages_blocks_hero_background_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_hero
@@ -8855,7 +8856,7 @@ ALTER TABLE ONLY public.pages_blocks_hero
 
 
 --
--- Name: pages_blocks_hero pages_blocks_hero_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_hero pages_blocks_hero_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_hero
@@ -8863,7 +8864,7 @@ ALTER TABLE ONLY public.pages_blocks_hero
 
 
 --
--- Name: pages_blocks_image_grid_images pages_blocks_image_grid_images_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_images pages_blocks_image_grid_images_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_image_grid_images
@@ -8871,7 +8872,7 @@ ALTER TABLE ONLY public.pages_blocks_image_grid_images
 
 
 --
--- Name: pages_blocks_image_grid_images pages_blocks_image_grid_images_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid_images pages_blocks_image_grid_images_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_image_grid_images
@@ -8879,7 +8880,7 @@ ALTER TABLE ONLY public.pages_blocks_image_grid_images
 
 
 --
--- Name: pages_blocks_image_grid pages_blocks_image_grid_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_image_grid pages_blocks_image_grid_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_image_grid
@@ -8887,7 +8888,7 @@ ALTER TABLE ONLY public.pages_blocks_image_grid
 
 
 --
--- Name: pages_blocks_product_grid pages_blocks_product_grid_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid pages_blocks_product_grid_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_product_grid
@@ -8895,7 +8896,7 @@ ALTER TABLE ONLY public.pages_blocks_product_grid
 
 
 --
--- Name: pages_blocks_product_grid_products pages_blocks_product_grid_products_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_product_grid_products pages_blocks_product_grid_products_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_product_grid_products
@@ -8903,7 +8904,7 @@ ALTER TABLE ONLY public.pages_blocks_product_grid_products
 
 
 --
--- Name: pages_blocks_spacer pages_blocks_spacer_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_spacer pages_blocks_spacer_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_spacer
@@ -8911,7 +8912,7 @@ ALTER TABLE ONLY public.pages_blocks_spacer
 
 
 --
--- Name: pages_blocks_text_cards_cards pages_blocks_text_cards_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards_cards pages_blocks_text_cards_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_text_cards_cards
@@ -8919,7 +8920,7 @@ ALTER TABLE ONLY public.pages_blocks_text_cards_cards
 
 
 --
--- Name: pages_blocks_text_cards pages_blocks_text_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_cards pages_blocks_text_cards_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_text_cards
@@ -8927,7 +8928,7 @@ ALTER TABLE ONLY public.pages_blocks_text_cards
 
 
 --
--- Name: pages_blocks_text_image pages_blocks_text_image_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_text_image pages_blocks_text_image_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_text_image
@@ -8935,7 +8936,7 @@ ALTER TABLE ONLY public.pages_blocks_text_image
 
 
 --
--- Name: pages_blocks_text pages_blocks_text_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_text pages_blocks_text_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_text
@@ -8943,7 +8944,7 @@ ALTER TABLE ONLY public.pages_blocks_text
 
 
 --
--- Name: pages_blocks_three_columns_cells pages_blocks_three_columns_cells_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns_cells pages_blocks_three_columns_cells_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_three_columns_cells
@@ -8951,7 +8952,7 @@ ALTER TABLE ONLY public.pages_blocks_three_columns_cells
 
 
 --
--- Name: pages_blocks_three_columns pages_blocks_three_columns_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_three_columns pages_blocks_three_columns_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_three_columns
@@ -8959,7 +8960,7 @@ ALTER TABLE ONLY public.pages_blocks_three_columns
 
 
 --
--- Name: pages_blocks_two_columns_cells pages_blocks_two_columns_cells_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns_cells pages_blocks_two_columns_cells_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_two_columns_cells
@@ -8967,7 +8968,7 @@ ALTER TABLE ONLY public.pages_blocks_two_columns_cells
 
 
 --
--- Name: pages_blocks_two_columns pages_blocks_two_columns_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_blocks_two_columns pages_blocks_two_columns_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_blocks_two_columns
@@ -8975,7 +8976,7 @@ ALTER TABLE ONLY public.pages_blocks_two_columns
 
 
 --
--- Name: pages_locales pages_locales_meta_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_locales pages_locales_meta_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_locales
@@ -8983,7 +8984,7 @@ ALTER TABLE ONLY public.pages_locales
 
 
 --
--- Name: pages_locales pages_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_locales pages_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_locales
@@ -8991,7 +8992,7 @@ ALTER TABLE ONLY public.pages_locales
 
 
 --
--- Name: pages pages_parent_id_pages_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages pages_parent_id_pages_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages
@@ -8999,7 +9000,7 @@ ALTER TABLE ONLY public.pages
 
 
 --
--- Name: pages_rels pages_rels_media_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_rels pages_rels_media_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_rels
@@ -9007,7 +9008,7 @@ ALTER TABLE ONLY public.pages_rels
 
 
 --
--- Name: pages_rels pages_rels_pages_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_rels pages_rels_pages_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_rels
@@ -9015,7 +9016,7 @@ ALTER TABLE ONLY public.pages_rels
 
 
 --
--- Name: pages_rels pages_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages_rels pages_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages_rels
@@ -9023,7 +9024,7 @@ ALTER TABLE ONLY public.pages_rels
 
 
 --
--- Name: pages pages_tenant_id_tenants_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: pages pages_tenant_id_tenants_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.pages
@@ -9031,7 +9032,7 @@ ALTER TABLE ONLY public.pages
 
 
 --
--- Name: payload_jobs_log payload_jobs_log_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_jobs_log payload_jobs_log_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_jobs_log
@@ -9039,7 +9040,7 @@ ALTER TABLE ONLY public.payload_jobs_log
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_footers_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_footers_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -9047,7 +9048,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_headers_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_headers_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -9055,7 +9056,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_media_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_media_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -9063,7 +9064,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_media_tag_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_media_tag_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -9071,7 +9072,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_pages_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_pages_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -9079,7 +9080,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -9087,7 +9088,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_payload_jobs_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_payload_jobs_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -9095,7 +9096,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_search_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_search_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -9103,7 +9104,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_tenants_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_tenants_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -9111,7 +9112,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_locked_documents_rels payload_locked_documents_rels_users_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_locked_documents_rels payload_locked_documents_rels_users_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_locked_documents_rels
@@ -9119,7 +9120,7 @@ ALTER TABLE ONLY public.payload_locked_documents_rels
 
 
 --
--- Name: payload_preferences_rels payload_preferences_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels payload_preferences_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_preferences_rels
@@ -9127,7 +9128,7 @@ ALTER TABLE ONLY public.payload_preferences_rels
 
 
 --
--- Name: payload_preferences_rels payload_preferences_rels_users_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: payload_preferences_rels payload_preferences_rels_users_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.payload_preferences_rels
@@ -9135,7 +9136,7 @@ ALTER TABLE ONLY public.payload_preferences_rels
 
 
 --
--- Name: search_categories search_categories_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: search_categories search_categories_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search_categories
@@ -9143,7 +9144,7 @@ ALTER TABLE ONLY public.search_categories
 
 
 --
--- Name: search_locales search_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: search_locales search_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search_locales
@@ -9151,7 +9152,7 @@ ALTER TABLE ONLY public.search_locales
 
 
 --
--- Name: search search_meta_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: search search_meta_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search
@@ -9159,7 +9160,7 @@ ALTER TABLE ONLY public.search
 
 
 --
--- Name: search_rels search_rels_pages_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: search_rels search_rels_pages_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search_rels
@@ -9167,7 +9168,7 @@ ALTER TABLE ONLY public.search_rels
 
 
 --
--- Name: search_rels search_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: search_rels search_rels_parent_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.search_rels
@@ -9175,7 +9176,7 @@ ALTER TABLE ONLY public.search_rels
 
 
 --
--- Name: tenants_locales tenants_locales_meta_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: tenants_locales tenants_locales_meta_image_id_media_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.tenants_locales
@@ -9183,7 +9184,7 @@ ALTER TABLE ONLY public.tenants_locales
 
 
 --
--- Name: tenants_locales tenants_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: tenants_locales tenants_locales_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.tenants_locales
@@ -9191,7 +9192,7 @@ ALTER TABLE ONLY public.tenants_locales
 
 
 --
--- Name: users_sessions users_sessions_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: strapi
+-- Name: users_sessions users_sessions_parent_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: odoo
 --
 
 ALTER TABLE ONLY public.users_sessions
@@ -9202,5 +9203,5 @@ ALTER TABLE ONLY public.users_sessions
 -- PostgreSQL database dump complete
 --
 
-\unrestrict lTO3F0j0Gw4gkr1Mc7SMqxTh5eoq1EoftTeZvkZBJflKSyjKCPfhlqBxJeb1nLk
+\unrestrict 1foYYxoNP9jx8lU5blAJIbZ6xMmQX3PwVIsSxV88PXdp9OZMV9tYu9NX3fZGPg2
 
