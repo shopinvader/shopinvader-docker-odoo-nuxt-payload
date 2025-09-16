@@ -3,7 +3,6 @@ networks:
 services:
   db:
     image: postgres:17
-    user: "${UID}:${UID}"
     environment:
       - POSTGRES_USER=odoo
       - POSTGRES_PASSWORD=odoo
