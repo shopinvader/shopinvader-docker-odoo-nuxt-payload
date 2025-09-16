@@ -43,7 +43,7 @@ export const lightEditor = lexicalEditor({
             },
           },
         ]
-        res = res.map((field) => {
+        res = res.map((field : any) => {
           if (field.name === 'doc') {
             field = {
               ...field,

@@ -25,14 +25,15 @@ export default defineNuxtConfig({
         file: "en-US.json",
         name: "English",
         icon: "circle-flags:en",
-      },
-      {
-        code: "fr",
-        language: "en_us",
-        file: "fr-FR.json",
-        name: "Français",
-        icon: "circle-flags:fr",
-      },
+      }
+      // TODO we should take this config from odoo api
+      //{
+      //  code: "fr",
+      //  language: "fr_fr",
+      //  file: "fr-FR.json",
+      //  name: "Français",
+      //  icon: "circle-flags:fr",
+      //},
     ],
     debug: false,
     lazy: true,
@@ -41,28 +42,9 @@ export default defineNuxtConfig({
     strategy: "prefix_except_default",
   },
   runtimeConfig: {
-    payload: {
-       url:
-        process.env.NUXT_PAYLOAD_URL ||
-        process.env.NUXT_PUBLIC_PAYLOAD_URL ||
-        "http://localhost:1337",
-    },
     public: {
       shopinvader: {
-        auth: {
-          type: "oidc",
-          profile: {
-            authority:
-              process.env.NUXT_PUBLIC_SHOPINVADER_AUTH_PROFILE_AUTHORITY || "",
-            clientId: "demo16.shopinvader.com",
-            redirectUri: "/account",
-            scope: "openid",
-            responseType: "code",
-            postLogoutRedirectUri: "/",
-          },
-        },
         erp: {
-          key: process.env.NUXT_PUBLIC_SHOPINVADER_ERP_KEY || "",
           url: process.env.NUXT_PUBLIC_SHOPINVADER_ERP_URL || "",
           default_role: "default",
         },

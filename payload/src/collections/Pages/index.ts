@@ -29,7 +29,7 @@ import { TwoColumnsBlock } from '@/blocks/TwoColumns/config'
 
 export const Pages: CollectionConfig<'pages'> = {
   slug: 'pages',
-  
+
   defaultPopulate: {
     title: true,
     slug: true,
@@ -45,6 +45,7 @@ export const Pages: CollectionConfig<'pages'> = {
           const tenant = await req.payload.findByID({
             collection: 'tenants',
             id: data.tenant.toString(),
+            locale
           })
           const { domain } = tenant
           return `${domain}/preview?location=${data.location}`
@@ -125,7 +126,7 @@ export const Pages: CollectionConfig<'pages'> = {
               admin: {
                 initCollapsed: false,
                 isSortable: true,
-                
+
               },
             },
           ],
@@ -187,9 +188,9 @@ export const Pages: CollectionConfig<'pages'> = {
       },
       hooks: {
         beforeChange: [async ({ data, req }) => {
-          let location = ''    
+          let location = ''
           const slug = data?.slug
-          const tenant = data?.tenant 
+          const tenant = data?.tenant
           const locale = data?.locale || req?.locale
           let pathname = '/'
           if(!isNaN(tenant)) {
@@ -206,8 +207,8 @@ export const Pages: CollectionConfig<'pages'> = {
             const url = new URL(tenantDoc?.domain)
             pathname = url.pathname
           }
-          
-          
+
+
           if (slug) {
             const parent = data?.parent
             if(slug != 'home') {

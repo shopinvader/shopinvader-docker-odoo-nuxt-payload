@@ -2,13 +2,11 @@ click-odoo-contrib
 
 # fs_storage with s3
 s3fs
-  
+
 # this one is useful to have the correct auth in swagger
-fastapi @ git+https://github.com/tiangolo/fastapi@refs/pull/5452/head
+# TODO check fastapi @ git+https://github.com/tiangolo/fastapi@refs/pull/5452/head
+fastapi>=0.110.0
 
-# shopinvader/odoo-shopinvader
-odoo-addon-shopinvader-v2-app-demo @ git+https://github.com/shopinvader/odoo-shopinvader@refs/pull/1364/head#subdirectory=setup/shopinvader_v2_app_demo
-odoo-addon-shopinvader_api_customer @ git+https://github.com/shopinvader/odoo-shopinvader@refs/pull/1551/head#subdirectory=setup/shopinvader_api_customer
-
-odoo-addon-web_refresher
-odoo-addon-web_responsive
+odoo-addon-shopinvader-sale-channel @ git+https://github.com/shopinvader/odoo-shopinvader@refs/pull/1604/head#subdirectory=setup/shopinvader_sale_channel
+odoo-addon-shopinvader-app @ git+https://github.com/shopinvader/odoo-shopinvader-app@refs/pull/1/head#subdirectory=shopinvader_app
+-e /odoo/shopinvader_docker_demo

@@ -2,7 +2,7 @@
 # base stage, with the runtime os-level dependencies
 #
 
-FROM ghcr.io/acsone/odoo-bedrock:16.0-py310-latest as base
+FROM ghcr.io/acsone/odoo-bedrock:16.0-py311-jammy-latest as base
 
 RUN apt-get -qq update \
  && apt-get -qq install --no-install-recommends \
@@ -26,11 +26,11 @@ RUN apt-get -qq update \
   libldap2-dev \
   libsasl2-dev \
   libpq-dev \
-  python3.10-dev
+  python3.11-dev
 
-# Install uv to benefit from parallel build and install. 
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh
-ENV PATH=/root/.cargo/bin:$PATH
+# Install uv to benefit from parallel build and install.
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
 # copy, since the cache is not in the final image
 ENV UV_LINK_MODE=copy
 
@@ -42,9 +42,10 @@ RUN mkdir -p /odoo/src \
 
 # Install Odoo in editable mode.
 # We can't use uv yet because of https://github.com/astral-sh/uv/issues/2744
-RUN pip install --no-deps -e /odoo/src/odoo
+RUN pip install -e /odoo/src/odoo --config-setting editable_mode=compat
 
 # Install Odoo dependencies, and our project dependencies.
+COPY shopinvader_docker_demo /odoo/shopinvader_docker_demo
 COPY requirements.txt.in .
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv pip install -r /odoo/src/odoo/requirements.txt -r requirements.txt.in
@@ -58,4 +59,9 @@ FROM base as final
 COPY --from=build /odoo /odoo
 RUN pip list
 
-COPY odoo-init /odoo-init
+RUN apt-get -qq update \
+ && apt-get -qq install --no-install-recommends \
+  git
+
+#
+COPY 000_odoo_init /odoo/start-entrypoint.d/000_odoo_init
