@@ -14,6 +14,8 @@ git clone https://github.com/shopinvader/shopinvader-docker-odoo-nuxt-payload
 
 cd shopinvader-docker-odoo-nuxt-payload
 
+git submodule init
+
 git submodule update
 
 docker compose build
