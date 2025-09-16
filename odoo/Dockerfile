@@ -64,4 +64,4 @@ RUN apt-get -qq update \
   git
 
 #
-COPY odoo-init /odoo/start-entrypoint.d/000_odoo-init
+COPY 000_odoo_init /odoo/start-entrypoint.d/000_odoo_init
