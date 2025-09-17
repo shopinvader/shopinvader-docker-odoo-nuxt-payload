@@ -30,6 +30,9 @@ Let's wait and service will be available on
 odoo : http://odoo.localhost:9080
 nuxt : http://nuxt.localhost:9080/
 payload : http://payload.localhost:9080
+elasticsearch : http://elasticsearch.localhost:9080
+typesense : http://typsense.localhost:9080
+typesense-dashboard : http://typsense-dashboard.localhost:9080
 
 
 ## ROADMAP
