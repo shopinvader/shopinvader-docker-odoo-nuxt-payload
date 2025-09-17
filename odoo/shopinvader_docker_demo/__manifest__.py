@@ -14,6 +14,7 @@
         "web_responsive",
         "web_theme_classic",
         "web_refresher",
+        "connector_typesense",
     ],
     "data": [
     ],
