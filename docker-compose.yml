@@ -104,6 +104,24 @@ services:
       - db
     ports:
       - 1337:1337
+  typesense:
+    image: typesense/typesense:30.0.rc15
+    restart: on-failure
+    volumes:
+      - ./typesense-data:/data
+    command: '--data-dir /data --api-key=xyz --enable-cors'
+    networks:
+      - local
+  typesense-dashboard:
+    image: ghcr.io/bfritscher/typesense-dashboard:latest
+    ports:
+      - "8280:80"
+    networks:
+      - local
+    depends_on:
+      - typesense
+    volumes:
+      - ./typesense.json:/srv/config.json
   nginx:
     image: nginx
     volumes:
@@ -118,11 +136,13 @@ services:
           - elasticsearch.localhost
           - odoo.localhost
           - payload.localhost
+          - typesense.localhost
     depends_on:
       - odoo
       - payload
       - nuxt
       - elasticsearch
+      - typesense-dashboard
 volumes:
   esdata:
   db:
