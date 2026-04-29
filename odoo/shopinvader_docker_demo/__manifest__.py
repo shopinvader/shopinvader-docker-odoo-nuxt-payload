@@ -5,7 +5,7 @@
 {
     "name": "Shopinvader Docker Demo",
     "summary": """Shopinvader docker demo""",
-    "version": "16.0.0.0.1",
+    "version": "18.0.0.0.1",
     "license": "AGPL-3",
     "author": "Akretion",
     "website": "https://github.com/shopinvader",
@@ -16,8 +16,6 @@
         "web_refresher",
         "connector_typesense",
     ],
-    "data": [
-    ],
-    "demo": [],
+    "data": [],
     "application": True,
 }

@@ -2,7 +2,7 @@
 # base stage, with the runtime os-level dependencies
 #
 
-FROM ghcr.io/acsone/odoo-bedrock:16.0-py311-jammy-latest as base
+FROM ghcr.io/acsone/odoo-bedrock:18.0-py312-noble-latest as base
 
 RUN apt-get -qq update \
  && apt-get -qq install --no-install-recommends \
@@ -26,7 +26,7 @@ RUN apt-get -qq update \
   libldap2-dev \
   libsasl2-dev \
   libpq-dev \
-  python3.11-dev
+  python3.12-dev
 
 # Install uv to benefit from parallel build and install.
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
@@ -35,7 +35,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 ENV UV_LINK_MODE=copy
 
 # Download Odoo to /odoo/src/odoo
-ARG ODOO_REF=16.0
+ARG ODOO_REF=18.0
 RUN mkdir -p /odoo/src \
   && curl -sSL https://github.com/odoo/odoo/archive/${ODOO_REF}.tar.gz | tar -C /odoo/src -zxf - \
   && mv /odoo/src/odoo-${ODOO_REF} /odoo/src/odoo
